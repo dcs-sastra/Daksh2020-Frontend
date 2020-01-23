@@ -1,0 +1,19 @@
+#navBar{
+    margin-top: 1vh;
+    z-index: 1;
+}
+
+.nav-item{
+    border-style: solid;
+    border-color: white;
+    
+    border-radius: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.nav-link{
+    color: white !important;
+}

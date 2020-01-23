@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="25" viewBox="0 0 140 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d424a;
+        font-size: 20px;
+        font-family: Muli-Bold, Muli;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="February_2020" data-name="February 2020" class="cls-1" transform="translate(70 20)"><tspan x="-69.78" y="0">February 2020</tspan></text>
+</svg>
