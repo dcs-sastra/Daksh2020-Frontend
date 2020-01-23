@@ -3,35 +3,67 @@
     margin-top: -110vh !important;
     margin-left: 50vw !important;
 }
-
+.shapes{
+    position: absolute;
+    margin-left: -40vw;
+    margin-top: 10vw;
+}
+.width{
+    width: 10rem;
+}
 .row{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
-
 }
-
 .col{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.card{
+    border: none;
+}
 .social{
     margin-top: 35vh;
 }
 .social img{
     margin-bottom: 7vh;
 }
-
 span{
     font-size: 17px;
     font-weight: bold;
 }
-
-.scroller{
-    margin-top: 15vh;
+.flexi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-
+.scroller{
+    margin-top: 20vh;
+}
+.register{
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 10px;
+    border-radius: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.companies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    text-align: center;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 60px;
+}
+.card-text{
+    font-size: 15px;
+}

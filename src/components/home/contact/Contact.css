@@ -1,0 +1,16 @@
+.contactus{
+    background-color: #e34b53;
+    color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.flex-end{
+    align-items: flex-end !important;
+}
+
+.marbot{
+    margin-bottom: 20px;
+}
+.cus{
+    font-size: 40px;
+}

@@ -11,9 +11,6 @@ function App() {
     <div class="contain">
       <Navbar />
       <Routes />
-      <div className="footer text-center">
-        Copyrights Reserved
-      </div>
     </div>
     </BrowserRouter>
   );
