@@ -17,7 +17,7 @@ class Navbar extends Component{
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item text-center">
                             <NavLink to="/" className="nav-link">
-                                Register
+                                Home
                             </NavLink>
                         </li>
                         <li className="nav-item text-center">

@@ -1,0 +1,30 @@
+.clusters{
+   font-size: 35px;
+   padding-left: 10px; 
+}
+
+.dot{
+    transform: scale(0.5);
+}
+.muted{
+    font-size: 20px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.flex span{
+    line-height: 65px;
+    font-size: 55px;
+    font-weight: 800;
+}
+.form-control-lg{
+    border-radius: 20px;
+}
+.btn-lg{
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px lightgray;
+}
