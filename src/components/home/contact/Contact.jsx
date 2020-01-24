@@ -12,14 +12,14 @@ class Contact extends Component{
     render(){
         return(
             <div class="contactus container">
-                <div class="row">
+                <div class="row center-align">
                     <div class="col">
                         <img src={DakshWhite} alt=""/>
                     </div>
-                    <div class="col">
+                    <div class="col flex-end">
                         <div class="row marbot"><span class="cus">Contact Us</span></div>
                         <div class="row marbot">
-                            <div class="col flex-end">
+                            <div class="col flex-end right-border">
                                 <span>Student Co-Ordinator</span>
                                 <span>coordinator.daksh@sastra.ac.in</span>
                                 <span>+91-81064-88664</span>
@@ -30,7 +30,7 @@ class Contact extends Component{
                                 <span>+91-82480-18114</span>
                             </div>
                         </div>
-                        <div class="row marbot">
+                        <div class="row marbot ">
                             <div class="col flex-end">
                                 <span>For sponsorship related queries</span>
                                 <span>marketing.daksh@sastra.ac.in</span>
@@ -50,7 +50,7 @@ class Contact extends Component{
                             </div>
                         </div>
                     </div>
-                    <div class="col flex-end">
+                    <div class="col-4 flex-end">
                         <div class="row">
                             <div class="col flex-end">
                                 <img src={fbWhite} alt=""/>

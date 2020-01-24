@@ -6,8 +6,14 @@
     align-items: flex-end !important;
 }
 .marbot{
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 .cus{
     font-size: 40px;
+}
+.center-align{
+    align-items: center;
+}
+.right-border{
+    border-right: 2px solid white;
 }
