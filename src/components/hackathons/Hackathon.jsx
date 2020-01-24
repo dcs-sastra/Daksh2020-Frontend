@@ -14,9 +14,12 @@ import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
 
-import RainGauge from "../../assets/hackathon/events/srm.png"
-import AgriDrone from "../../assets/hackathon/events/agridrone.png"
-import GenAPI from "../../assets/hackathon/events/gen.png"
+import RainGauge from "../../assets/hackathon/events/srm.png";
+import AgriDrone from "../../assets/hackathon/events/agridrone.png";
+import GenAPI from "../../assets/hackathon/events/gen.png";
+
+import TNIcon from "../../assets/hackathon/events/tnicon.png";
+import GenIcon from "../../assets/hackathon/events/genicon.png";
 
 import "./Hackathon.css"
 
@@ -57,25 +60,43 @@ class Hackathon extends Component{
                 <div class="container" id="hacklist">
                     <div class="row"><h1 class="display-4">Hackathons</h1></div>
                     <div class="row first">
-                        <div class="col">
+                        <div class="col inlay">
                             <img src={RainGauge} alt=""/>
+                            <div class="bottom-left"><img src={TNIcon} alt=""/></div>
+                            <div class="name"><p class="h1">Smart Rain Gauge</p></div>
+                            <div class="bottom-right"><button class="btn btn-primary">Explore</button></div>
                         </div>
-                        <div class="col">
+                        <div class="col inlay">
                             <img src={AgriDrone} alt=""/>
+                            <div class="bottom-left"><img src={TNIcon} alt=""/></div>
+                            <div class="name"><p class="h1">Agri Drone</p></div>
+                            <div class="bottom-right"><button class="btn btn-primary">Explore</button></div>
                         </div>
-                        <div class="col">
+                        <div class="col inlay">
                             <img src={GenAPI} alt=""/>
+                            <div class="bottom-left"><img src={GenIcon} alt=""/></div>
+                            <div class="name"><p class="h1">Genesys API</p></div>
+                            <div class="bottom-right"><button class="btn btn-primary">Explore</button></div>
                         </div>
                     </div>
                     <div class="row last">
-                        <div class="col">
+                        <div class="col inlay">
                                 <img src={RainGauge} alt=""/>
+                                <div class="bottom-left"><img src={TNIcon} alt=""/></div>
+                                <div class="name"><p class="h1">Smart Rain Gauge</p></div>
+                                <div class="bottom-right"><button class="btn btn-primary">Explore</button></div>
                             </div>
-                            <div class="col">
+                            <div class="col inlay">
                                 <img src={AgriDrone} alt=""/>
+                                <div class="bottom-left"><img src={TNIcon} alt=""/></div>
+                                <div class="name"><p class="h1">Agri Drone</p></div>
+                                <div class="bottom-right"><button class="btn btn-primary">Explore</button></div>
                             </div>
-                            <div class="col">
+                            <div class="col inlay">
                                 <img src={GenAPI} alt=""/>
+                                <div class="bottom-left"><img src={GenIcon} alt=""/></div>
+                                <div class="name"><p class="h1">Genesys API</p></div>
+                                <div class="bottom-right"><button class="btn btn-primary">Explore</button></div>
                             </div>
                         </div>
                 </div>

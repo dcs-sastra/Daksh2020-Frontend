@@ -37,3 +37,24 @@ p{
 .space-evenly{
     justify-content: space-evenly;
 }
+
+.inlay{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.bottom-right{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+.name{
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+}
