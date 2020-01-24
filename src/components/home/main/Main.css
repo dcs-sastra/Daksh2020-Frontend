@@ -67,3 +67,7 @@ span{
 .card-text{
     font-size: 15px;
 }
+
+.marbot{
+    margin-bottom: 0px !important;
+}

@@ -74,7 +74,7 @@ class Main extends Component{
                 </div>               
                 <div id="hackathon" class="flexi">
                     <h1 class="display-4">A Plethora of Competitions</h1>
-                    <div class="card">
+                    <div class="card marbot">
                         <div class="card-body">
                             <div class="row container">
                                 <div class="card width">
