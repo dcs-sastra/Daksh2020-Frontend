@@ -71,3 +71,18 @@ span{
 .marbot{
     margin-bottom: 0px !important;
 }
+
+/* New Changes */
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daksh-title {
+    width: 40%;
+    margin: 10vh auto !important;
+    background-color: blue;
+    text-align : center;
+}
