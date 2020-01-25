@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 
 import DakshWhite from "../../../assets/dakshWhite.png";
 import fbWhite from "../../../assets/fbWhite.png";
@@ -8,13 +8,13 @@ import DevLove from "../../../assets/devLove.png"
 
 import "./Contact.css"
 
-class Contact extends Component{
-    render(){
-        return(
-            <div class="contactus container">
+class Contact extends Component {
+    render() {
+        return (
+            <div class="contactus">
                 <div class="row center-align">
                     <div class="col">
-                        <img src={DakshWhite} alt=""/>
+                        <img src={DakshWhite} alt="" />
                     </div>
                     <div class="col flex-end">
                         <div class="row marbot"><span class="cus">Contact Us</span></div>
@@ -43,7 +43,7 @@ class Contact extends Component{
                     <div class="col flex-end">
                         <div class="row">
                             <div class="col">
-                                <img src={instaWhite} alt=""/>
+                                <img src={instaWhite} alt="" />
                             </div>
                             <div class="col">
                                 <p>@daksh2k20</p>
@@ -53,7 +53,7 @@ class Contact extends Component{
                     <div class="col-4 flex-end">
                         <div class="row">
                             <div class="col flex-end">
-                                <img src={fbWhite} alt=""/>
+                                <img src={fbWhite} alt="" />
                             </div>
                             <div class="col flex-end">
                                 <p>Daksh - SASTRA University</p>
@@ -64,10 +64,10 @@ class Contact extends Component{
                 <div class="row">
                     <div class="col">
                         <div class="row marbot">
-                            <img src={DevLove} alt=""/>
+                            <img src={DevLove} alt="" />
                         </div>
                         <div class="row">
-                            <img src={DSC} alt=""/>
+                            <img src={DSC} alt="" />
                         </div>
                     </div>
                 </div>
