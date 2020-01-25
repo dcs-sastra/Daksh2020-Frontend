@@ -105,7 +105,7 @@ class Hackathon extends Component{
                         </div>
                 </div>
                 <Switch>
-                    <Route path={`${match.path}/:hackName`}><HackInfo hackName={"Hi"}></HackInfo></Route>
+                    <Route path={`${match.path}/:hackName`}><HackInfo hackName={`${match.path}/:hackName`}></HackInfo></Route>
                 </Switch>   
                 <Contact></Contact>                
             </>
