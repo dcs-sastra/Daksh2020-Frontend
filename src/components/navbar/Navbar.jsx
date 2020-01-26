@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import logo from '../../assets/dakshLogo.svg';
+import MyModel from '../Auth/Model'
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import { connect } from 'react-redux';
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false
+        }
+        this.toggleModal = () => this.setState({ isOpen: !this.state.isOpen })
+    }
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light" id="navBar">
@@ -25,16 +34,24 @@ class Navbar extends Component {
                                 Contact
                             </NavLink>
                         </li>
-                        <li className="nav-item text-center">
-                            <NavLink to="/contact" className="nav-link">
-                                Dive In
-                            </NavLink>
-                        </li>
+                        {!this.props.authState && <li className="nav-item text-center">
+                            <button onClick={() => this.toggleModal()} className="nav-link login">
+                                Login
+                            </button>
+                        </li>}
                     </ul>
                 </div>
+                <MyModel isOpen={this.state.isOpen} toggle={this.toggleModal} />
             </nav>
         )
     }
 }
 
-export default Navbar;
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+        authState: state.user.authStatus
+    }
+}
+
+export default connect(mapStateToProps)(Navbar);

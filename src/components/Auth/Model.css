@@ -1,0 +1,17 @@
+.redirect {
+  width: 100%;
+  text-align: right !important;
+  color: blue;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.authform label{
+  margin-top: 10px;
+}
+
+.login-btn {
+  background-color: rgb(255, 56, 89) !important;
+  outline: none;
+  border: none;
+}

@@ -159,7 +159,10 @@ span{
         margin: 7vh auto !important;
 
     }
+    .daksh-title img {
+        width: 70%;
+    }
     .circleWrapper{
-        display: none;
+       display: none;
     }
 }
