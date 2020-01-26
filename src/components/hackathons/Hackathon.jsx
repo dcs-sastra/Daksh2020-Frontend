@@ -30,10 +30,6 @@ import {setHackathonList} from '../../actions/Thunks/thunk';
 
 class Hackathon extends Component{
 
-    state = {
-        hackathons: []
-    }
-
     componentDidMount() {
         this.props.setHackathonList();
     }
@@ -47,7 +43,7 @@ class Hackathon extends Component{
                     backgroundImage: `url(${this.props.hackathons[i].poster})`
                 };
                 hackthonElements.push(
-                        <Link to={`${match.url}/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style = {setBg}>
+                        <Link to={`${match.url}${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style = {setBg}>
                             <div class="name"><h3>{this.props.hackathons[i].title}</h3></div>
                         </Link>
                     );
