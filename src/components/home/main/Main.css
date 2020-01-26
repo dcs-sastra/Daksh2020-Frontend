@@ -11,13 +11,13 @@
 .width{
     width: 10rem;
 }
-.row{
+.main-row{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
-.col{
+.main-col{
     display: flex;
     flex-direction: column;
     align-items: center;
