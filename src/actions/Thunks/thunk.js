@@ -1,6 +1,7 @@
 import actions from '../index';
 import axios from 'axios';
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
+import { SET_HACK_LIST } from "../index";
 
 export const loginThunk = (email, password) => async (dispatch) => {
   // do backend logic here

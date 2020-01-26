@@ -27,7 +27,6 @@ class Main extends Component {
         return (
             <div>
                 <div className="circleWrapper"><img src={Circles} alt=""></img></div>
-<<<<<<< HEAD
                 {/* <div className="shapes"><img src={Donut} alt=""></img></div> */}
                 <div className="row">
                     <div className="col-sm-6">
@@ -80,41 +79,6 @@ class Main extends Component {
                                         <div class="col">
                                             <span>Thanjavur</span>
                                             <span>SASTRA</span>
-=======
-                <div class="shapes"><img src={Donut} alt=""></img></div>
-                <div class="container">
-                    <div class="main-row row">
-                        <div class="main-col col social">
-                            <img src={Fb} alt="" />
-                            <img src={Insta} alt="" />
-                        </div>
-                        <div class="main-col col">
-                            <img src={Daksh} alt="" />
-                            <img src={Matter} alt=""></img>
-                            <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
-                            <div class="container">
-                                <div class="main-row row">
-                                    <div class="main-col col">
-                                        <div class="main-row row">
-                                            <div class="main-col col">
-                                                <img src={Calendar} alt="" />
-                                            </div>
-                                            <div class="main-col col">
-                                                <img src={Dates} alt="" />
-                                                <span>21,22 & 23</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="main-col col">
-                                        <div class="main-row row">
-                                            <div class="main-col col">
-                                                <img src={Pin} alt="" />
-                                            </div>
-                                            <div class="main-col col">
-                                                <span>Thanjavur</span>
-                                                <span>SASTRA</span>
-                                            </div>
->>>>>>> 38221800b03ca3aafbb71cbbb21e07da7902e03b
                                         </div>
                                     </div>
                                 </div>
