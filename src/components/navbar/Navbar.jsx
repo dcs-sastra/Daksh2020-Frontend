@@ -1,11 +1,11 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import logo from '../../assets/dakshLogo.svg';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
-class Navbar extends Component{
-    render(){
-        return(
+class Navbar extends Component {
+    render() {
+        return (
             <nav className="navbar navbar-expand-lg navbar-light" id="navBar">
                 <NavLink className="navbar-brand navbar__brand" to="/">
                     <img src={logo} className="navbar__logo" alt=""></img>
@@ -23,6 +23,11 @@ class Navbar extends Component{
                         <li className="nav-item text-center">
                             <NavLink to="/contact" className="nav-link">
                                 Contact
+                            </NavLink>
+                        </li>
+                        <li className="nav-item text-center">
+                            <NavLink to="/contact" className="nav-link">
+                                Dive In
                             </NavLink>
                         </li>
                     </ul>

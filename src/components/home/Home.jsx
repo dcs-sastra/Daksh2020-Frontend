@@ -10,8 +10,8 @@ class Home extends Component {
     return (
       <div className="contain">
         <Main></Main>
-        <ComeSoon></ComeSoon>
-        <Contact></Contact>
+        {/* <ComeSoon></ComeSoon>
+        <Contact></Contact> */}
       </div>
     );
   }
