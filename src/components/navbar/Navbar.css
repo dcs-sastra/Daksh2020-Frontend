@@ -6,7 +6,7 @@
 .nav-item{
     border-style: solid;
     border-color: white;
-    
+
     border-radius: 2em;
     margin-left: 2em;
     margin-right: 2em;
@@ -16,4 +16,11 @@
 
 .nav-link{
     color: white !important;
+}
+
+.login {
+    background-color: transparent !important;
+    border: 0;
+    outline: 0;
+    width: 100%;
 }

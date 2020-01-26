@@ -27,70 +27,74 @@ class Main extends Component {
         return (
             <div>
                 <div className="circleWrapper"><img src={Circles} alt=""></img></div>
-                <div class="shapes"><img src={Donut} alt=""></img></div>
-                <div class="container">
-                    <div class="main-row row">
-                        <div class="main-col col social">
-                            <img src={Fb} alt="" />
-                            <img src={Insta} alt="" />
-                        </div>
-                        <div class="main-col col">
-                            <img src={Daksh} alt="" />
-                            <img src={Matter} alt=""></img>
-                            <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
-                            <div class="container">
-                                <div class="main-row row">
-                                    <div class="main-col col">
-                                        <div class="main-row row">
-                                            <div class="main-col col">
-                                                <img src={Calendar} alt="" />
-                                            </div>
-                                            <div class="main-col col">
-                                                <img src={Dates} alt="" />
-                                                <span>21,22 & 23</span>
-                                            </div>
+                {/* <div className="shapes"><img src={Donut} alt=""></img></div> */}
+                <div className="row">
+                    <div className="col-sm-6">
+                        <div className="container">
+                            <div className="daksh-title">
+                                <img src={Daksh} alt="" />
+                                <h4>Build things that matter</h4>
+                                <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
+                                <div className="timings-block">
+                                    <div>
+                                        <img src={Fb} alt="" className="insta" />
+                                        <img src={Insta} alt="" className="insta" />
+                                    </div>
+                                    <div>
+                                        <img src={Calendar} alt="" className="icons" />
+                                        <div className="details">
+                                            <p>February 2020</p>
+                                            <p>21,22 & 23</p>
                                         </div>
                                     </div>
-                                    <div class="main-col col">
-                                        <div class="main-row row">
-                                            <div class="main-col col">
-                                                <img src={Pin} alt="" />
-                                            </div>
-                                            <div class="main-col col">
-                                                <span>Thanjavur</span>
-                                                <span>SASTRA</span>
-                                            </div>
+                                    <div>
+                                        <img src={Pin} alt="" className="icons" />
+                                        <div className="details">
+                                            <p>Thanjavur</p>
+                                            <p>SASTRA</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="scroller"><Link activeClass="active" to="hackathon" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Link></div>
                         </div>
-                        <div class="col">
-                            <img src={Developers} class="dev" alt="" />
+                        {/*
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src={Calendar} alt="" />
+                                        </div>
+                                        <div class="col">
+                                            <img src={Dates} alt="" />
+                                            <span>21,22 & 23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src={Pin} alt="" />
+                                        </div>
+                                        <div class="col">
+                                            <span>Thanjavur</span>
+                                            <span>SASTRA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         */}
+                    </div>
+                    <div className="col-sm-6">
+                        <div className="dev-wrapper">
+                            <img src={Developers} className="dev" alt="" />
                         </div>
                     </div>
                 </div>
-                {/* Jumbotron part */}
-                {/* <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12 ">
-                            <div className="title-wrapper">
-                                {/* Text and logo part
-                <div className="daksh-title">
-                    <h4>hello</h4>
+                <div className="scrollwrapper">
+                    <a className="scroller" href="#hackathon"><img src={Arrow} alt="" /></a>
                 </div>
-            </div>
-                        </div >
-            <div className="col-sm-12">
-                <div className="daksh-title">
-                    <h4>hello</h4>
-                </div>
-            </div>
-                    </div >
-                </div >
-                {/* Photo part */}
-
                 < div id="hackathon" class="flexi" >
                     <h1 class="display-4">A Plethora of Competitions</h1>
                     <div class="card marbot">

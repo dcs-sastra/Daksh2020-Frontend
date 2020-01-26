@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import {hackathonReducer} from './hackathonReducer';
-
+import { userReducer } from './user';
+import { hackathonReducer } from './hackathonReducer';
 
 
 export const rootReducer = combineReducers({
-  user: (state = {}, action) => state,
+  user: userReducer,
   hackathon: hackathonReducer
 });
