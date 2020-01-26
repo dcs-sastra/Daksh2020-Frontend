@@ -1,11 +1,21 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import logo from '../../assets/dakshLogo.svg';
-import {NavLink} from 'react-router-dom';
+import MyModel from '../Auth/Model'
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import { connect } from 'react-redux';
+import { signOut } from '../../actions/Thunks/thunk'
 
-class Navbar extends Component{
-    render(){
-        return(
+class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false
+        }
+        this.toggleModal = () => this.setState({ isOpen: !this.state.isOpen })
+    }
+    render() {
+        return (
             <nav className="navbar navbar-expand-lg navbar-light" id="navBar">
                 <NavLink className="navbar-brand navbar__brand" to="/">
                     <img src={logo} className="navbar__logo" alt=""></img>
@@ -25,11 +35,29 @@ class Navbar extends Component{
                                 Contact
                             </NavLink>
                         </li>
+                        {!this.props.authState && <li className="nav-item text-center">
+                            <button onClick={() => this.toggleModal()} className="nav-link login">
+                                Login
+                            </button>
+                        </li>}
+                        {this.props.authState && <li className="nav-item text-center">
+                            <button onClick={() => this.props.signOut()} className="nav-link login">
+                                Logout
+                            </button>
+                        </li>}
                     </ul>
                 </div>
+                <MyModel isOpen={this.state.isOpen} toggle={this.toggleModal} />
             </nav>
         )
     }
 }
 
-export default Navbar;
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+        authState: state.user.authStatus
+    }
+}
+
+export default connect(mapStateToProps, { signOut })(Navbar);

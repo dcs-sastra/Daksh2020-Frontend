@@ -1,7 +1,7 @@
 .circleWrapper{
     position: absolute;
-    margin-top: -110vh !important;
-    margin-left: 50vw !important;
+    margin-top: -100% !important;
+    margin-left: 45% !important;
 }
 .shapes{
     position: absolute;
@@ -11,26 +11,26 @@
 .width{
     width: 10rem;
 }
-.row{
+/* .row{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
-.col{
+.main-col{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 .card{
     border: none;
 }
-.social{
+/* .social{
     margin-top: 35vh;
 }
 .social img{
     margin-bottom: 7vh;
-}
+} */
 span{
     font-size: 17px;
     font-weight: bold;
@@ -40,9 +40,20 @@ span{
     flex-direction: column;
     align-items: center;
 }
-.scroller{
-    margin-top: 20vh;
+
+.scrollwrapper {
+    width: 5%;
+    margin: 0 auto !important;
 }
+
+.scroller {
+    width: 0  !important;
+    background-color: transparent !important;
+    border: 0;
+    outline: none !important;
+    margin: 0 auto !important;
+}
+
 .register{
     border-style: solid;
     border-color: black;
@@ -74,6 +85,17 @@ span{
 
 /* New Changes */
 
+
+.dev-wrapper {
+    text-align: center;
+    width: 100% !important;
+}
+
+.dev-wrapper img {
+    width: 100%;
+    min-width: 400px;
+}
+
 .title-wrapper {
     display: flex;
     align-items: center;
@@ -81,8 +103,66 @@ span{
 }
 
 .daksh-title {
-    width: 40%;
-    margin: 10vh auto !important;
-    background-color: blue;
-    text-align : center;
+    width: 70%;
+    margin: 7vh auto !important;
+
+}
+
+.daksh-title img {
+    width: 60%;
+}
+
+.daksh-title h4, p {
+    padding-left: 5%;
+}
+.daksh-title h4 {
+    font-size: 2rem;
+    color: black;
+}
+
+.daksh-title p {
+    color: gray;
+}
+
+
+.icons {
+    width: 5em !important;
+    float: left;
+    padding-left: 20%;
+    margin: 5px;
+}
+
+.timings-block {
+    display: flex;
+    flex-flow: row;
+}
+
+.timings-block p {
+    color: black;
+    margin: 0 20px ;
+    padding: 0;
+}
+
+.details {
+    display: flex;
+    flex-flow: column;
+}
+
+.insta {
+    width: 30px !important;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .daksh-title {
+        width: 90%;
+        margin: 7vh auto !important;
+
+    }
+    .daksh-title img {
+        width: 70%;
+    }
+    .circleWrapper{
+       display: none;
+    }
 }
