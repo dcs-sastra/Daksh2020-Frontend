@@ -39,19 +39,21 @@ p{
 }
 
 .inlay{
-    padding: 1.5%;
+    padding: 0;
     margin: 2%;
     position: relative;
     color: white;
-    border-radius: 5%;
+    border-radius: 10%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-height: 180px;
     min-width: 300px;
+    max-width: 350px;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
+    overflow: hidden;
 }
 /*.bottom-right{
     position: absolute;
@@ -65,6 +67,9 @@ p{
 }*/
 .name{  
     text-align: right;
+    padding: 1.5%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.80) );
+    border-radius: 10%;
 }
 
 .flex-bottom {
@@ -74,5 +79,16 @@ p{
 
 .btn-custom {
     background: #e34b53;
+    color: white;
+}
+
+.my-card-link {
+    transition: all .1s ease-in-out;
+    margin: 1em;
+}
+
+.my-card-link:hover {
+    transform: scale(1.05);
+    text-decoration: none;
     color: white;
 }

@@ -44,16 +44,12 @@ class Hackathon extends Component{
         if(this.props.hackathons) {
             for(let i=0; i<this.props.hackathons.length; ++i) {
                 let setBg = {
-                    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url(${this.props.hackathons[i].poster})`
+                    backgroundImage: `url(${this.props.hackathons[i].poster})`
                 };
                 hackthonElements.push(
-                        <div className="col-md-3 inlay" style={setBg}>
+                        <Link to={`${match.url}/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style = {setBg}>
                             <div class="name"><h3>{this.props.hackathons[i].title}</h3></div>
-                            <div class="flex-bottom">
-                                <img src={TNIcon} alt="" />
-                                <Link to={`${match.url}/${this.props.hackathons[i]._id}`}><button class="btn btn-custom">Explore</button></Link>
-                            </div>
-                        </div>
+                        </Link>
                     );
             }
         }
