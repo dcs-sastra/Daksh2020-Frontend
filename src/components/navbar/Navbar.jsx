@@ -4,6 +4,7 @@ import MyModel from '../Auth/Model'
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { connect } from 'react-redux';
+import { signOut } from '../../actions/Thunks/thunk'
 
 class Navbar extends Component {
     constructor(props) {
@@ -39,6 +40,11 @@ class Navbar extends Component {
                                 Login
                             </button>
                         </li>}
+                        {this.props.authState && <li className="nav-item text-center">
+                            <button onClick={() => this.props.signOut()} className="nav-link login">
+                                Logout
+                            </button>
+                        </li>}
                     </ul>
                 </div>
                 <MyModel isOpen={this.state.isOpen} toggle={this.toggleModal} />
@@ -54,4 +60,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps, { signOut })(Navbar);

@@ -52,3 +52,11 @@ export const authStateRefresh = () => dispatch => {
     })
   }
 }
+
+
+export const signOut = () => dispatch => {
+  localStorage.removeItem('token');
+  dispatch({
+    type: actions.LOGOUT
+  })
+}

@@ -1,5 +1,6 @@
 export default {
   "LOGIN": "login",
   "SIGNUP": "signup",
-  "AUTHSTATE": "authstate"
+  "AUTHSTATE": "authstate",
+  "LOGOUT": 'signout'
 }
