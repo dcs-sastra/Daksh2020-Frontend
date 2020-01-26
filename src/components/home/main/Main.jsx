@@ -29,34 +29,34 @@ class Main extends Component {
                 <div className="circleWrapper"><img src={Circles} alt=""></img></div>
                 <div class="shapes"><img src={Donut} alt=""></img></div>
                 <div class="container">
-                    <div class="row">
-                        <div class="col social">
+                    <div class="main-row row">
+                        <div class="main-col col social">
                             <img src={Fb} alt="" />
                             <img src={Insta} alt="" />
                         </div>
-                        <div class="col">
+                        <div class="main-col col">
                             <img src={Daksh} alt="" />
                             <img src={Matter} alt=""></img>
                             <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
                             <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="col">
+                                <div class="main-row row">
+                                    <div class="main-col col">
+                                        <div class="main-row row">
+                                            <div class="main-col col">
                                                 <img src={Calendar} alt="" />
                                             </div>
-                                            <div class="col">
+                                            <div class="main-col col">
                                                 <img src={Dates} alt="" />
                                                 <span>21,22 & 23</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="col">
+                                    <div class="main-col col">
+                                        <div class="main-row row">
+                                            <div class="main-col col">
                                                 <img src={Pin} alt="" />
                                             </div>
-                                            <div class="col">
+                                            <div class="main-col col">
                                                 <span>Thanjavur</span>
                                                 <span>SASTRA</span>
                                             </div>
