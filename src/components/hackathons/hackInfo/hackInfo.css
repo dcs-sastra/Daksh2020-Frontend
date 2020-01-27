@@ -1,3 +1,107 @@
-.blank{
-    color: violet;
+.hackinfo-area {
+	margin: 10vmax 10vmin 0px 10vmin;
+}
+
+.my-title {
+	font-size: 1.5em;
+	margin-bottom: 1.3em;
+	font-weight: bold;
+}
+.hack-desc {
+	color: black;
+	padding: 0px;
+}
+
+.top-part {
+	flex-wrap: wrap-reverse !important;
+	justify-content: center;
+}
+
+.poster {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 1.3em;
+}
+
+.poster-wrapper {
+	display: flex;
+	min-height: 180px;
+	min-width: 300px;
+    max-width: 350px !important;
+}
+
+.btn-grp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 5vh;
+}
+
+.btn-blue {
+	margin: 1.5vw;
+	color: white !important;
+	background-color: #37a6b2 !important;
+	border-radius: 5em !important;
+	padding: 0.5em 2em !important;
+	font-weight: bold !important;
+}
+
+.btn-red {
+	margin: 1.5vw;
+	color: white !important;
+	background-color: #ff5353 !important;
+	border-radius: 5em !important;
+	padding: 0.5em 2em !important;
+	font-weight: bold !important
+}
+
+#upper-image {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 76vw;
+}
+
+#ripple {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 70vw;
+}
+
+#doodle {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 13vw;	
+}
+
+.bottom-part {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.social {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 2vh;
+	left: 0px;
+	height: 30vh;
+}
+
+.social-icon {
+	width: 3vw;
+	margin: 1.3vmax 0px;
+}
+
+.line {
+	width: 0.3vw;
+	height: 8vh;
+	background-color: #ff5353;
+	margin: 1.3vmax 0px;
 }
