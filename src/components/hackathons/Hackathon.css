@@ -47,7 +47,7 @@ p{
 }
 
 .inlay{
-    padding: 0;
+    padding: 0px !important;
     margin: 2%;
     position: relative;
     color: white;
