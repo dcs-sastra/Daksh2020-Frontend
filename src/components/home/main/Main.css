@@ -2,6 +2,7 @@
     position: absolute;
     margin-top: -100% !important;
     margin-left: 45% !important;
+    z-index: -2;
 }
 .shapes{
     position: absolute;
@@ -31,10 +32,7 @@
 .social img{
     margin-bottom: 7vh;
 } */
-span{
-    font-size: 17px;
-    font-weight: bold;
-}
+
 .flexi{
     display: flex;
     flex-direction: column;
@@ -64,19 +62,10 @@ span{
     padding-left: 1em;
     padding-right: 1em;
 }
-.companies{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card{
-    text-align: center;
-    margin-left: 110px;
-    margin-right: 110px;
-    margin-bottom: 60px;
-}
-.card-text{
-    font-size: 15px;
+
+.card-title {
+    color: black;
+    font-weight: bold;
 }
 
 .marbot{
@@ -165,4 +154,12 @@ span{
     .circleWrapper{
        display: none;
     }
+}
+
+.card-img-top {
+    width: 30% !important;
+}
+
+.all-events {
+    padding: 8vh 0;
 }

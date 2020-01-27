@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Routes from './components/routes/Routes';
 import Navbar from './components/navbar/Navbar';
+import Contact from './components/home/contact/Contact';
 
 class App extends React.Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ class App extends React.Component {
           <ToastContainer />
           <Navbar />
           <Routes />
+          <Contact />
         </div>
       </BrowserRouter>
     );

@@ -86,7 +86,6 @@ class Hackathon extends Component {
                     <div class="row justify-content-center" id="hacklist"><h1 class="display-4">Hackathons</h1></div>
                     <div class="row align-items-center justify-content-center">{hackthonElements}</div>
                 </div>
-                <Contact></Contact>
             </>
         )
     }
