@@ -11,65 +11,53 @@ import "./Contact.css"
 class Contact extends Component {
     render() {
         return (
-            <div class="contactus">
-                <div class="row center-align">
-                    <div class="col">
-                        <img src={DakshWhite} alt="" />
-                    </div>
-                    <div class="col flex-end">
-                        <div class="row marbot"><span class="cus">Contact Us</span></div>
-                        <div class="row marbot">
-                            <div class="col flex-end right-border">
-                                <span>Student Co-Ordinator</span>
-                                <span>coordinator.daksh@sastra.ac.in</span>
-                                <span>+91-81064-88664</span>
-                            </div>
-                            <div class="col flex-end">
-                                <span>Student Secretary</span>
-                                <span>chairman.daksh@sastra.ac.in</span>
-                                <span>+91-82480-18114</span>
-                            </div>
-                        </div>
-                        <div class="row marbot ">
-                            <div class="col flex-end">
-                                <span>For sponsorship related queries</span>
-                                <span>marketing.daksh@sastra.ac.in</span>
-                                <span>+91-82205-91664</span>
-                            </div>
+            <div className="footer">
+
+                <div className="row">
+                    <div className="col-sm-12 col-md-6">
+                        <div className="logo-wrapper text-left">
+                            <img src={DakshWhite} alt="..." />
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col flex-end">
-                        <div class="row">
-                            <div class="col">
-                                <img src={instaWhite} alt="" />
+                    <div className="col-sm-12 col-md-6">
+                        <div className="text-right contact-title">
+                            <h2>Contact Us</h2>
+                            <div className="line-contact"></div>
+                        </div>
+                        <br /><br />
+                        <div className="row">
+                            <div className="col text-right with-line">
+                                <h4>Student Coordinator</h4>
+                                <p>coordinator.daksh@sastra.ac.in</p>
+                                <p>+91-81064-88664</p>
                             </div>
-                            <div class="col">
-                                <p>@daksh2k20</p>
+                            <div className="col text-right">
+                                <h4>Student Secretery</h4>
+                                <p>chairman.daksh@sastra.ac.in</p>
+                                <p>+91-82480-18114</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4 flex-end">
-                        <div class="row">
-                            <div class="col flex-end">
-                                <img src={fbWhite} alt="" />
-                            </div>
-                            <div class="col flex-end">
-                                <p>Daksh - SASTRA University</p>
-                            </div>
+                        <br />
+                        <br />
+                        <div className="text-right">
+                            <h2>For sponsorship related queries</h2>
+                            <p>marketing.daksh@sastra.edu</p>
+                            <p>+91-8220591664</p>
+                        </div>
+                        <div className="text-right contact-social">
+                            <span>
+                                <img src={instaWhite} width="20px" /> &nbsp; @daksh2k20
+                            </span>
+                            <span>
+                                <img src={fbWhite} width="20px" /> &nbsp; Daksh - SASTRA University
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="row marbot">
-                            <img src={DevLove} alt="" />
-                        </div>
-                        <div class="row">
-                            <img src={DSC} alt="" />
-                        </div>
-                    </div>
+                <br /><br />
+                <div className="text-center">
+                    <div><img src={DevLove} /></div>
+                    <img src={DSC} />
                 </div>
             </div>
         )

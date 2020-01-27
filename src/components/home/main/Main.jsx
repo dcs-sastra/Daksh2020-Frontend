@@ -95,47 +95,44 @@ class Main extends Component {
                 <div className="scrollwrapper">
                     <a className="scroller" href="#hackathon"><img src={Arrow} alt="" /></a>
                 </div>
-                < div id="hackathon" class="flexi" >
-                    <h1 class="display-4">A Plethora of Competitions</h1>
-                    <div class="card marbot">
-                        <div class="card-body">
-                            <div class="row container">
-                                <div class="card width">
-                                    <img src={Hackathons} class="card-img-top" alt="" />
-                                    <h5 class="card-title">Hackathons</h5>
-                                    <div class="card-text lead">Coming Soon</div>
-                                </div>
-                                <div class="card width">
-                                    <img src={RevEngg} class="card-img-top" alt="" />
-                                    <h5 class="card-title">Reverse Engineering</h5>
-                                    <div class="card-text lead">Coming Soon</div>
-                                </div>
-                                <div class="card width">
-                                    <img src={TheBTD} class="card-img-top" alt="" />
-                                    <h5 class="card-title">The Big Tech Debate</h5>
-                                    <div class="card-text lead">Coming Soon</div>
-                                </div>
+                <div className="events">
+                    <h1 className="text-center">A Plethora of Competitions</h1>
+                    <div className="container">
+
+                        <div className="row text-center">
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <img src={Hackathons} className="card-img-top" alt="" />
+                                <h5 class="card-title">Hackathons</h5>
+                                <div class="card-text lead">Coming Soon</div>
                             </div>
-                            <div class="row container">
-                                <div class="card width">
-                                    <img src={FinalPitch} class="card-img-top" alt="" />
-                                    <h5 class="card-title">The Final Pitch</h5>
-                                    <div class="card-text lead">Coming Soon</div>
-                                </div>
-                                <div class="card width">
-                                    <img src={FoxHunt} class="card-img-top" alt="" />
-                                    <h5 class="card-title">Fox Hunt</h5>
-                                    <div class="card-text lead">Coming Soon</div>
-                                </div>
-                                <div class="card width">
-                                    <img src={IdeaPresentation} class="card-img-top" alt="" />
-                                    <h5 class="card-title">Idea Presentation</h5>
-                                    <div class="card-text lead">Coming Soon</div>
-                                </div>
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <img src={RevEngg} className="card-img-top" alt="" />
+                                <h5 class="card-title">Reverse Engineering</h5>
+                                <div class="card-text lead">Coming Soon</div>
+                            </div>
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <img src={TheBTD} className="card-img-top" alt="" />
+                                <h5 class="card-title">The Big Tech Debate</h5>
+                                <div class="card-text lead">Coming Soon</div>
+                            </div>
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <img src={FinalPitch} className="card-img-top" alt="" />
+                                <h5 class="card-title">The Final Pitch</h5>
+                                <div class="card-text lead">Coming Soon</div>
+                            </div>
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <img src={FoxHunt} className="card-img-top" alt="" />
+                                <h5 class="card-title">Fox Hunt</h5>
+                                <div class="card-text lead">Coming Soon</div>
+                            </div>
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <img src={IdeaPresentation} className="card-img-top" alt="" />
+                                <h5 class="card-title">Idea Presentation</h5>
+                                <div class="card-text lead">Coming Soon</div>
                             </div>
                         </div>
                     </div>
-                </div >
+                </div>
             </div >
         )
     }
