@@ -1,19 +1,39 @@
-.contactus{
+.footer {
     background-color: #e34b53;
     color: white;
+    padding: 5%;
+    padding-bottom:  0;
 }
-.flex-end{
-    align-items: flex-end !important;
+
+.contact-title {
+    font-weight: bolder;
 }
-.marbot{
-    margin-bottom: 20px !important;
+
+.line-contact {
+    width: 10%;
+    height: 4px;
+    background-color: #fff !important;
+    margin-left: auto;
+    border-radius: 5px;
 }
-.cus{
-    font-size: 40px;
+
+.with-line {
+    border-right: 1px solid white;
 }
-.center-align{
+
+.contact-social {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+.contact-social span {
+    margin-right: 30px;
+}
+
+.logo-wrapper {
+    display: flex;
     align-items: center;
-}
-.right-border{
-    border-right: 2px solid white;
+    justify-content: center;
+    height: 60%;
 }
