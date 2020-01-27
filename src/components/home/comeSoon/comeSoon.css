@@ -72,9 +72,9 @@
 }
 
 .subscribe-form {
-    display: flex;
-    justify-content: space-around !important;
+    text-align: center;
 }
+
 
 @media only screen and (max-width: 600px) {
     .cs {

@@ -1,3 +1,4 @@
-html {
-  width: 100% !important;
+html, body {
+  width: 100vw !important;
+  overflow-x: hidden;
 }
