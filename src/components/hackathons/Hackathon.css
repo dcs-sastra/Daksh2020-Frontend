@@ -4,8 +4,13 @@
     right: 0;
 }
 .social{
-    margin-top: 20vh;
-    margin-left: 2vw;
+    margin-top: 10vh;
+    margin-left: 0vw;
+    text-align: right;
+}
+
+.social img {
+    margin-bottom: 5vh;
 }
 p{
     color: white;
@@ -18,11 +23,13 @@ p{
     margin-bottom: 40px;
 }
 .subheading{
-    width: 50%;
+    width: 40%;
     margin-top: 30px;
+    margin-left: auto;
 }
 .display-1{
-    font-weight: 900;
+    font-weight: 4rem;
+    font-weight: 1500;
 }
 .right-justify{
     text-align: right;
@@ -35,6 +42,7 @@ p{
     margin-top: 30px;
 }
 .space-evenly{
+    width: 100%;
     justify-content: space-evenly;
 }
 
@@ -65,7 +73,7 @@ p{
     bottom: 5%;
     left: 5%;
 }*/
-.name{  
+.name{
     text-align: right;
     padding: 1.5%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.80) );
@@ -91,4 +99,28 @@ p{
     transform: scale(1.05);
     text-decoration: none;
     color: white;
+}
+
+.hacktitle {
+    margin-top: 4vw;
+    margin-right: 6vw;
+}
+
+.sponsor {
+    width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    .subheading{
+        width: 80%;
+        margin-top: 30px;
+        margin-left: auto;
+    }
+    .justify{
+        justify-content: flex-start !important;
+        margin-top: 40vh !important;
+    }
+    .sponsor {
+        width: 60%;
+    }
 }
