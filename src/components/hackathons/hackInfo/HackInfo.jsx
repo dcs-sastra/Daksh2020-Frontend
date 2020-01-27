@@ -55,7 +55,8 @@ class HackInfo extends Component {
 						<img id="timeline" src={TimeLine} className="img-fluid" />
 						<div className="btn-grp">
 							<button className="btn btn-blue">Problem Statement</button>
-							<button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>
+							{this.props.authState && <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>}
+							{!this.props.authState && <span> Please Login to Register</span>}
 						</div>
 					</div>
 				</div>
@@ -68,7 +69,8 @@ class HackInfo extends Component {
 
 const mapStateToProps = state => {
 	return {
-		hackathons: state.hackathon.hackathons
+		hackathons: state.hackathon.hackathons,
+		authState: state.user.authStatus
 	}
 }
 

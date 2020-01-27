@@ -15,6 +15,7 @@ class Navbar extends Component {
         this.toggleModal = () => this.setState({ isOpen: !this.state.isOpen })
     }
     render() {
+
         return (
             <nav className="navbar navbar-expand-lg navbar-light" id="navBar">
                 <NavLink className="navbar-brand navbar__brand" to="/">
