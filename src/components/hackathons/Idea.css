@@ -1,0 +1,70 @@
+.comps
+{
+    background-color: #dc3545;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 10px;
+}
+
+ul{
+    list-style-type: square;
+}
+
+li{
+    margin: 5px;
+}
+
+.closer{
+    opacity: 0.7;
+}
+
+.closer:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.limit{
+    display: none;
+}
+
+input{
+    outline: none;
+    width: 400px
+}
+
+@media only screen and (max-width: 500px) {
+    input{
+        width: 250px;
+    }
+    textarea{
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    input{
+        width: 300px;
+    }
+    textarea{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 968px) {
+    input{
+        width: 350px;
+    }
+    textarea{
+        width: 350px;
+    }
+}
+
+input:focus,textarea:focus{
+    outline:none;
+    box-shadow: 0 0 5px #dc3545;
+    border: 1px solid #dc3545;
+}
+
+#myFile{
+    padding:10px 0px
+}
