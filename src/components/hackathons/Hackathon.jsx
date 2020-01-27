@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Link as Pink} from "react-scroll";
-import {Switch,Route,Link} from 'react-router-dom';
-import axios from 'axios';
+import {Link} from 'react-router-dom';
 
-import HackInfo from "../../components/hackathons/hackInfo/HackInfo";
 import Contact from "../../components/home/contact/Contact";
 
 import Circles from "../../assets/hackathon/circles.png"
@@ -27,38 +25,31 @@ import TNIcon from "../../assets/hackathon/events/tnicon.png";
 
 import "./Hackathon.css"
 
+import {connect} from 'react-redux';
+import {setHackathonList} from '../../actions/Thunks/thunk';
+
 class Hackathon extends Component{
 
-    state = {
-        hackathons: []
-    }
-
     componentDidMount() {
-        axios.get('http://localhost:8080/events')
-            .then(res => {
-                const hackathons = res.data.events;
-                this.setState({hackathons})
-            })
-            .catch(err => console.log(err));
+        this.props.setHackathonList();
     }
 
     render() {
         const match = this.props.match;
         let hackthonElements = [];
-        for(let i=0; i<this.state.hackathons.length; ++i) {
-            let setBg = {
-                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url(${this.state.hackathons[i].poster})`
-            };
-            hackthonElements.push(
-                    <div className="col-md-3 inlay" style={setBg}>
-                        <div class="name"><h3>{this.state.hackathons[i].title}</h3></div>
-                        <div class="flex-bottom">
-                            <img src={TNIcon} alt="" />
-                            <Link to={`${match.url}/${this.state.hackathons[i]._id}`}><button class="btn btn-custom">Explore</button></Link>
-                        </div>
-                    </div>
-                );
+        if(this.props.hackathons) {
+            for(let i=0; i<this.props.hackathons.length; ++i) {
+                let setBg = {
+                    backgroundImage: `url(${this.props.hackathons[i].poster})`
+                };
+                hackthonElements.push(
+                        <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style = {setBg}>
+                            <div class="name"><h3>{this.props.hackathons[i].title}</h3></div>
+                        </Link>
+                    );
+            }
         }
+        
         return(  
             <>
                 <div class="circles"><img src={Circles} alt=""/></div>
@@ -95,13 +86,17 @@ class Hackathon extends Component{
                     <div class="row justify-content-center" id="hacklist"><h1 class="display-4">Hackathons</h1></div>
                     <div class="row align-items-center justify-content-center">{hackthonElements}</div>
                 </div>
-                <Switch>
-                    <Route path={`${match.path}/:hackName`}><HackInfo hackName={`${match.path}/:hackName`}></HackInfo></Route>
-                </Switch>   
                 <Contact></Contact>                
             </>
         )
     }
 }
 
-export default Hackathon;
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        hackathons: state.hackathon.hackathons
+    }
+}
+
+export default connect(mapStateToProps, {setHackathonList})(Hackathon);
