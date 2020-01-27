@@ -16,13 +16,6 @@ import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
 
-// import RainGauge from "../../assets/hackathon/events/srm.png";
-// import AgriDrone from "../../assets/hackathon/events/agridrone.png";
-// import GenAPI from "../../assets/hackathon/events/gen.png";
-
-import TNIcon from "../../assets/hackathon/events/tnicon.png";
-// import GenIcon from "../../assets/hackathon/events/genicon.png";
-
 import "./Hackathon.css"
 
 import { connect } from 'react-redux';
@@ -44,50 +37,43 @@ class Hackathon extends Component {
                 };
                 hackthonElements.push(
                     <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
-                        <div class="name"><h3>{this.props.hackathons[i].title}</h3></div>
+                        <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
                     </Link>
                 );
             }
         }
 
         return (
-            <>
-                <div class="circles"><img src={Circles} alt="" /></div>
-                <div class="container-fluid">
-                    <div class="row mar text-right">
-                        <div class="col hacktitle">
-                            <p class="display-1">Hackathons</p>
-                            <p class="subheading lead text-right">Our goal is to expose the student community to actual industry and Societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</p>
+            <div className="hacklist-page">
+
+                <div class="circles"><img src={Circles} alt="" id="circle-img" /></div>
+
+                <div class="">
+                    <div class="hacktitle-wrapper">
+                        <div class="hacktitle-inner-wrapper">
+                            <div class="hackathon-title">Hackathons</div>
+                            <div class="subheading">Our goal is to expose the student community to actual industry and Societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</div>
                         </div>
                     </div>
-                    <div class="row justify">
-                        <div class="col-1 social">
-                            <div><img src={Fb} alt="" /></div>
-                            <div><img src={Insta} alt="" /></div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="container">
-                                <div class="row space-evenly">
-                                    <img src={TN} alt="" className="sponsor" />
-                                    <img src={TCS50} alt="" className="sponsor" />
-                                    <img src={SC} alt="" className="sponsor" />
-                                </div>
-                                <div class="row space-evenly">
-                                    <img src={Genesys} alt="" className="sponsor" />
-                                    <img src={TVS} alt="" className="sponsor" />
-                                    <img src={PayPal} alt="" className="sponsor" />
-                                </div>
-                            </div>
+
+                    <div className="sponsors-group-wrapper">
+                        <div className="sponsors-group">
+                            <img src = {TN} className="img-fluid sponsor" />
+                            <img src = {TCS50} className="img-fluid sponsor" />
+                            <img src = {SC} className="img-fluid sponsor" />
+                            <img src = {Genesys} className="img-fluid sponsor" />
+                            <img src = {TVS} className="img-fluid sponsor" />
+                            <img src = {PayPal} className="img-fluid sponsor" />
                         </div>
                     </div>
                     <div class="row scroller"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-center" id="hacklist"><h1 class="display-4">Hackathons</h1></div>
+                    <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Hackathons</h1></div>
                     <div class="row align-items-center justify-content-center">{hackthonElements}</div>
                 </div>
                 <Contact></Contact>
-            </>
+            </div>
         )
     }
 }
