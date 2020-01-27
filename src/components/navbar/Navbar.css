@@ -6,7 +6,8 @@
 .nav-item{
     border-style: solid;
     border-color: white;
-
+    background-color: #fff;
+    color: black !important;
     border-radius: 2em;
     margin-left: 2em;
     margin-right: 2em;
@@ -15,7 +16,7 @@
 }
 
 .nav-link{
-    color: white !important;
+    color: black !important;
 }
 
 .login {

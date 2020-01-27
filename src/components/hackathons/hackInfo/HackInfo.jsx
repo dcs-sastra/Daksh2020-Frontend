@@ -21,12 +21,12 @@ class HackInfo extends Component {
 
 	render() {
 
-		let title, description, poster;
+		let title, description, poster, id;
 		if (this.props.hackathons) {
 			for (let i = 0; i < this.props.hackathons.length; ++i) {
 				const hackItem = this.props.hackathons[i];
 				if (hackItem._id === this.props.match.params.id)
-					[title, description, poster] = [hackItem.title, hackItem.description, hackItem.poster];
+					[title, description, poster, id] = [hackItem.title, hackItem.description, hackItem.poster, hackItem._id];
 			}
 
 		}
@@ -60,7 +60,7 @@ class HackInfo extends Component {
 						</div>
 					</div>
 				</div>
-				<Idea title={title} />
+				<Idea title={title} id={id} />
 			</>
 		)
 	}

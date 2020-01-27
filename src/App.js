@@ -20,7 +20,6 @@ class App extends React.Component {
           <ToastContainer />
           <Navbar />
           <Routes />
-          <Contact />
         </div>
       </BrowserRouter>
     );

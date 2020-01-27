@@ -11,6 +11,7 @@ class Home extends Component {
       <div className="contain">
         <Main></Main>
         <ComeSoon></ComeSoon>
+        <Contact />
       </div>
     );
   }

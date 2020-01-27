@@ -84,12 +84,13 @@ export const registerHack = (data) => async dispatch => {
     const res = await axios.post('/hackathon/addTeam', data, config);
     if (res.data.ok) {
       toast.success("Team registered! We'll reach back to you")
+    } else {
     }
     dispatch({
       type: ADD_TEAM
     })
   } catch (err) {
     console.log(err.response)
-    toast.error(err.response.error);
+    toast.error(err.response.data.message);
   }
 }

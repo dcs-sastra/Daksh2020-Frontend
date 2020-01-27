@@ -21,7 +21,7 @@ class Idea extends Component {
         "teamMatesEmail": this.state.emails,
         "ideaInConcise": this.state.abstract,
         "documentLink": this.state.url,
-        "eventTitle": this.props.title
+        "eventId": this.props.id
       }
       console.log(data);
       this.props.registerHack(data);

@@ -31,11 +31,7 @@ class Navbar extends Component {
                                 Hackathon
                             </NavLink>
                         </li>
-                        <li className="nav-item text-center">
-                            <NavLink to="/contact" className="nav-link">
-                                Contact
-                            </NavLink>
-                        </li>
+
                         {!this.props.authState && <li className="nav-item text-center">
                             <button onClick={() => this.toggleModal()} className="nav-link login">
                                 Login
