@@ -66,12 +66,13 @@ export const setHackathonList = (hackathons) => (dispatch) => {
   console.log("setHackathonList");
   axios.get('/events')
     .then(res => {
+      console.log(res);
       dispatch({
         type: SET_HACK_LIST,
         hackathons: res.data.events
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err.response));
 }
 
 export const registerHack = (data) => async dispatch => {

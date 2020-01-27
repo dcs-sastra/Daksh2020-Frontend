@@ -6,7 +6,7 @@ import Idea from '../Idea';
 
 import Fb from "../../../assets/fb.svg";
 import Insta from "../../../assets/insta.svg";
-import TimeLine from "../../../assets/hackInfo/TimeLine.png";
+import TimeLine from "../../../assets/hackInfo/timeline.png";
 import Doodle from "../../../assets/hackInfo/Doodle.png";
 import Ripple from "../../../assets/hackInfo/Ripple.png";
 import UpperImage from "../../../assets/hackInfo/UpperImage.png";
@@ -21,12 +21,13 @@ class HackInfo extends Component {
 
 	render() {
 
-		let title, description, poster, id;
+		let title, description, poster, id, ps;
 		if (this.props.hackathons) {
 			for (let i = 0; i < this.props.hackathons.length; ++i) {
 				const hackItem = this.props.hackathons[i];
+				console.log(hackItem);
 				if (hackItem._id === this.props.match.params.id)
-					[title, description, poster, id] = [hackItem.title, hackItem.description, hackItem.poster, hackItem._id];
+					[title, description, poster, id, ps] = [hackItem.title, hackItem.description, hackItem.poster, hackItem._id, hackItem.problemStatement];
 			}
 
 		}
@@ -37,8 +38,8 @@ class HackInfo extends Component {
 				<img src={Ripple} id="ripple" />
 				<img src={Doodle} id="doodle" />
 				<div className="social">
-					<img src={Fb} className="social-icon" />
-					<img src={Insta} className="social-icon" />
+					<a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} className="social-icon" /></a>
+					<a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} className="social-icon" /></a>
 					<div className="line" />
 				</div>
 				<div className="hackinfo-area">
@@ -54,7 +55,7 @@ class HackInfo extends Component {
 					<div className="bottom-part">
 						<img id="timeline" src={TimeLine} className="img-fluid" />
 						<div className="btn-grp">
-							<button className="btn btn-blue">Problem Statement</button>
+							<a className="btn btn-blue" target="_blank" href={ps}>Problem Statement</a>
 							{this.props.authState && <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>}
 							{!this.props.authState && <span> Please Login to Register</span>}
 						</div>

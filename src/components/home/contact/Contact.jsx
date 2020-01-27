@@ -57,7 +57,7 @@ class Contact extends Component {
                 <br /><br />
                 <div className="text-center">
                     <div><img src={DevLove} /></div>
-                    <img src={DSC} />
+                    <img className="dsc-logo-footer" src={DSC} />
                 </div>
             </div>
         )

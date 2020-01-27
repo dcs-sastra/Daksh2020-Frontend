@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-scroll";
-
+import { NavLink as Linker } from 'react-router-dom';
 import Circles from "../../../assets/concentricCircles.svg"
 import Daksh from "../../../assets/daksh.svg"
 import Developers from "../../../assets/developers.svg"
@@ -37,8 +37,8 @@ class Main extends Component {
                                 <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
                                 <div className="timings-block">
                                     <div>
-                                        <img src={Fb} alt="" className="insta" />
-                                        <img src={Insta} alt="" className="insta" />
+                                        <a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} alt="" className="insta" /></a>
+                                        <a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} alt="" className="insta" /></a>
                                     </div>
                                     <div>
                                         <img src={Calendar} alt="" className="icons" />
@@ -95,16 +95,19 @@ class Main extends Component {
                 <div className="scrollwrapper">
                     <a className="scroller" href="#hackathon"><img src={Arrow} alt="" /></a>
                 </div>
-                <div className="events">
+                <div className="events" id="hackathon">
                     <h1 className="text-center">A Plethora of Competitions</h1>
                     <div className="container">
 
                         <div className="row text-center">
                             <div className="col-md-4 col-sm-6 all-events">
-                                <img src={Hackathons} className="card-img-top" alt="" />
-                                <h5 class="card-title">Hackathons</h5>
-                                <div class="card-text lead">Coming Soon</div>
+                                <Linker className="hackathon-link" to="/hackathon">
+                                    <img src={Hackathons} className="card-img-top" alt="" />
+                                    <h5 class="card-title">Hackathons</h5>
+                                    <div class="card-text lead">A series of mind boggling competitions involving creative and scientific thinking fusion to produce disruptive  innovative results</div>
+                                </Linker>
                             </div>
+
                             <div className="col-md-4 col-sm-6 all-events">
                                 <img src={RevEngg} className="card-img-top" alt="" />
                                 <h5 class="card-title">Reverse Engineering</h5>

@@ -163,3 +163,13 @@
 .all-events {
     padding: 8vh 0;
 }
+
+.hackathon-link {
+    color: black !important;
+    text-decoration: none;
+    display: inline;
+}
+
+.hackathon-link:hover {
+    text-decoration: none;
+}
