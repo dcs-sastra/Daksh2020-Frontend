@@ -10,7 +10,6 @@ export default function Routes(){
         <Switch>
             <Route exact path='/' component= {Home}/>
             <Route exact path='/hackathon' component= {Hackathon}/>
-            <Route exact path='/idea' component = {Idea} />
         </Switch>
     )
 }
