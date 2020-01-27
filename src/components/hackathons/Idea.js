@@ -1,130 +1,143 @@
-import React, {Component} from 'react';
-import {Link as Pink} from "react-scroll";
-import {Switch,Route,Link} from 'react-router-dom';
-
-import HackInfo from "../../components/hackathons/hackInfo/HackInfo";
-import Contact from "../../components/home/contact/Contact";
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { registerHack } from '../../actions/Thunks/thunk';
 import "./Idea.css"
 
-class Idea extends Component{
+class Idea extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      emails: [],
+      team: "",
+      email: "",
+      limit: 2,
+      abstract: "",
+      url: ""
+    }
+    this.handleSubmit = (e) => {
+      e.preventDefault();
+      const data = {
+        "teamName": this.state.team,
+        "teamMatesEmail": this.state.emails,
+        "ideaInConcise": this.state.abstract,
+        "documentLink": this.state.url,
+        "eventTitle": this.props.title
+      }
+      console.log(data);
+      this.props.registerHack(data);
+    }
+  }
 
-    state={
-      emails:[],
-      team:"",
-      email:"",
-      limit:2,
-      abstract:"",
-      url:""
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleEmail = (e) => {
+    this.setState({ email: e.target.value })
+  }
+
+  handleTeam = (e) => {
+    this.setState({ team: e.target.value })
+  }
+
+  handleURL = (e) => {
+    this.setState({ url: e.target.value })
+  }
+
+  validateEmail = () => {
+    if (this.state.emails.length > this.state.limit - 1) {
+      document.getElementById("limiter").className = "limit"
+      return;
     }
 
-    handleEmail = (e) =>{
-      this.setState({email:e.target.value})
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
+      this.setState({ emails: [...this.state.emails, this.state.email] })
     }
+  }
 
-    handleTeam = (e) =>{
-      this.setState({team:e.target.value})
+  onDelete = (index) => {
+    var arr = this.state.emails
+    arr.splice(index, 1)
+    this.setState({ emails: arr })
+
+    if (this.state.emails.length == this.state.limit - 1) {
+      document.getElementById("limiter").className = "enable"
+      this.setState({ email: "" })
     }
+  }
 
-    handleURL = (e) =>{
-        this.setState({url:e.target.value})
-    }
+  handleAbstract = (e) => {
+    this.setState({ abstract: e.target.value })
+  }
 
-    validateEmail = () =>{
-        if(this.state.emails.length == this.state.limit-1)
-        document.getElementById("limiter").className="row limit"
+  clear = () => {
+    this.setState({
+      emails: [],
+      team: "",
+      email: "",
+      limit: 2,
+      abstract: "",
+      url: ""
+    })
+  }
 
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))
-        {
-          this.setState({emails:[...this.state.emails, this.state.email]})
-          this.setState({
-              team:"",
-              email:""
-          })
-        }
-    }
+  render() {
+    const match = this.props.match;
+    return (
+      <>
+        <div class="modal fade" id="hackregister">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
 
-    onDelete = (index) =>{
-        var arr = this.state.emails
-        arr.splice(index,1)
-        this.setState({emails:arr})
+              <div class="modal-header">
+                <h4 class="modal-title">Idea Submission</h4>
+                <button type="button" class="close" data-dismiss="modal" onClick={this.clear}>&times;</button>
+              </div>
 
-        if(this.state.emails.length == this.state.limit-1)
-        {
-        document.getElementById("limiter").className="row"
-        this.setState({email:""})
-        }
-    }
+              <div class="modal-body">
 
-    handleAbstract = (e) =>{
-        this.setState({abstract:e.target.value})
-    }
-  
-    render(){
-        const match = this.props.match;
-        return(  
-            <>
-            <div class="container">
+                <label for="team">Team Name:</label>
+                <input type="text" class="form-control" name="team" placeholder="Team Name" onChange={this.handleChange} name="team" value={this.state.team} />&nbsp;
 
-              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
-                Register
-              </button>
-
-              <div class="modal fade" id="myModal">
-                <div class="modal-dialog modal-dialog-scrollable">
-                  <div class="modal-content">
-                  
-                    <div class="modal-header">
-                      <h4 class="modal-title">Idea Submission</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    
-                    <div class="modal-body">
-                    <div class="container">
-                    <label for="team">Team Name:</label>                      
-                      <div class="row">
-                    <div><input type="text" class="form-control-sm" placeholder="Team Name" onChange={this.handleTeam} name="team" value={this.state.team}/></div>&nbsp;
-                    </div>
-
-                    <br />
-                    <label for="emails">Email IDs:</label>                    
-                    <ul>
-                    {this.state.emails.map((data,index)=><li key={index}><span class="comps">{data}</span> <span class="closer" onClick={()=>this.onDelete(index)}>&times;</span></li>)}
-                    </ul>
-                    <div class="row" id="limiter">
-                      <div><input type="email" class="form-control-sm" placeholder="Your email" onChange={this.handleEmail} name="emails" value={this.state.email}/></div>&nbsp;
-                      <button type="button" class="btn btn-danger btn-circle btn-sm" onClick={this.validateEmail}><b>+</b></button> 
-                      </div>
-
-                    <br />
-                    <label for="abstract">Abstract:</label>
-                      <div class="row">
-                    <div><textarea type="text" class="form-control-sm" placeholder="Abstract" rows="10" cols="40" onChange={this.handleAbstract} name="abstract" value={this.state.abstract}/></div>&nbsp;
-                    </div>
-
-                    <label for="link">Google Drive URL:</label>
-                    <div class="row">
-                    <div><input type="text" class="form-control-sm" placeholder="URL" onChange={this.handleURL} name="url" value={this.state.url}/></div>&nbsp;
-                    </div>
-
-                    <br />
-                    <button class="btn btn-danger btn-sm">Submit</button>
-
-                    </div>
-
-                    </div>
-                    </div>
+                <br />
+                <label for="emails">Email IDs:</label>
+                <div>
+                  <ul>
+                    {this.state.emails.map((data, index) => <li key={index}><span class="comps">{data}</span> <span class="closer" onClick={() => this.onDelete(index)}>&times;</span></li>)}
+                  </ul>
+                </div>
+                <br />
+                <div class="input-group" id="limiter">
+                  <input type="email" class="form-control" placeholder="Your email" onChange={this.handleEmail} name="emails" value={this.state.email} />
+                  <div className="input-group-append">
+                    <button type="button" class="btn btn-danger btn-circle btn" onClick={this.validateEmail}><b>+</b></button>
                   </div>
                 </div>
-              </div>
-              
 
-                <Switch>
-                    <Route path={`${match.path}/:hackName`}><HackInfo hackName={`${match.path}/:hackName`}></HackInfo></Route>
-                </Switch>   
-                <Contact></Contact>                
-            </>
-        )
-    }
+                <br />
+                <label for="abstract">Abstract:</label>
+                <textarea type="text" class="form-control" placeholder="Abstract" rows="10" cols="40" onChange={this.handleChange} name="abstract" value={this.state.abstract} />
+                <br />
+                <label for="link">Google Drive URL:</label>
+
+                <input type="text" class="form-control" placeholder="URL" onChange={this.handleChange} name="url" value={this.state.url} />
+
+                <br />
+                <button class="btn btn-danger btn-block" type="submit" onClick={this.handleSubmit}>Submit</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <Switch>
+          <Route path={`${match.path}/:hackName`}><HackInfo hackName={`${match.path}/:hackName`}></HackInfo></Route>
+        </Switch> */}
+        {/* <Contact></Contact> */}
+      </>
+    )
+  }
 }
 
-export default Idea;
+export default connect(null, { registerHack })(Idea);

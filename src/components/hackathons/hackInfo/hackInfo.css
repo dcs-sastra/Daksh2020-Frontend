@@ -67,13 +67,14 @@
 	bottom: 0px;
 	left: 0px;
 	width: 70vw;
+	z-index: -2;
 }
 
 #doodle {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
-	width: 13vw;	
+	width: 13vw;
 }
 
 .bottom-part {

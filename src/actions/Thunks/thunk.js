@@ -1,7 +1,7 @@
 import actions from '../index';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { SET_HACK_LIST } from "../index";
+import { SET_HACK_LIST, ADD_TEAM } from "../index";
 
 export const loginThunk = (email, password) => async (dispatch) => {
   // do backend logic here
@@ -72,4 +72,24 @@ export const setHackathonList = (hackathons) => (dispatch) => {
       });
     })
     .catch(err => console.log(err));
+}
+
+export const registerHack = (data) => async dispatch => {
+  const config = {
+    headers: {
+      "auth-token": localStorage.getItem('token')
+    }
+  }
+  try {
+    const res = await axios.post('/hackathon/addTeam', data, config);
+    if (res.data.ok) {
+      toast.success("Team registered! We'll reach back to you")
+    }
+    dispatch({
+      type: ADD_TEAM
+    })
+  } catch (err) {
+    console.log(err.response)
+    toast.error(err.response.error);
+  }
 }

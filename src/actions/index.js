@@ -6,3 +6,4 @@ export default {
 }
 export const LOGIN = "login";
 export const SET_HACK_LIST = "set_hack_list";
+export const ADD_TEAM = "add_team";
