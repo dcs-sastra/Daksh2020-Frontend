@@ -9,7 +9,6 @@ import Arrow from "../../assets/arrow.svg";
 import Fb from "../../assets/fb.svg";
 import Insta from "../../assets/insta.svg";
 
-import TN from "../../assets/hackathon/tn.png";
 import TCS50 from "../../assets/hackathon/tcs50.png";
 import SC from "../../assets/hackathon/sc.png";
 import Genesys from "../../assets/hackathon/genesys.png";
@@ -53,12 +52,13 @@ class Hackathon extends Component {
                         <div class="hacktitle-inner-wrapper">
                             <div class="hackathon-title">Hackathons</div>
                             <div class="subheading">Our goal is to expose the student community to actual industry and Societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</div>
+                            <br />
+                                <a className="btn btn-danger btn-sm" type="submit" href="https://drive.google.com/uc?id=1wQEiP9IiUPnqyGQkHrMJSyv4-r6eR8MS" target="_blank">Guidelines</a>
                         </div>
                     </div>
 
                     <div className="sponsors-group-wrapper">
                         <div className="sponsors-group">
-                            <img src = {TN} className="img-fluid sponsor" />
                             <img src = {TCS50} className="img-fluid sponsor" />
                             <img src = {SC} className="img-fluid sponsor" />
                             <img src = {Genesys} className="img-fluid sponsor" />

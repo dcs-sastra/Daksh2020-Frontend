@@ -11,7 +11,7 @@ class Idea extends Component {
       team: "",
       email: "",
       minlimit: 2,
-      maxlimit: 6,
+      maxlimit: 5,
       abstract: "",
       url: ""
     }
