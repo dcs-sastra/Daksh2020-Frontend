@@ -43,7 +43,9 @@
     width: 5%;
     margin: 0 auto !important;
 }
-
+.scrollwrapper :hover{
+    cursor: pointer;
+}
 .scroller {
     width: 0  !important;
     background-color: transparent !important;
