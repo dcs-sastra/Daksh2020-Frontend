@@ -1,8 +1,8 @@
 .footer {
     background-color: #e34b53;
     color: white;
-    padding: 5%;
-    padding-bottom:  0;
+    padding: 8vh;
+    /*padding-bottom:  0;*/
 }
 
 .contact-title {
@@ -39,5 +39,31 @@
 }
 
 .dsc-logo-footer {
-    width: 20%;
+    /*width: 16em;*/
+}
+
+.dsc-credits {
+    margin-top: 10vh;
+}
+
+#ft-daksh {
+    max-width: 90vw;
+}
+
+.row .footer {
+    align-items: center;
+    justify-content: center;
+}
+
+.center-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+}
+
+@media only screen and (max-width: 584px) {
+    .with-line {
+        border-right: none;
+    }
 }
