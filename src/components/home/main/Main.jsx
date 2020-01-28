@@ -69,6 +69,9 @@ class Main extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <div className="scrollwrapper ">
+                                 <a className="scroller" onClick={this.handleOnClick}><img src={Arrow} alt="" /></a>
+                            </div>
                         </div>
                         {/*
                         <div class="container">
@@ -98,16 +101,17 @@ class Main extends Component {
                             </div>
                         </div>
                          */}
+                    
                     </div>
                     <div className="col-sm-6">
                         <div className="dev-wrapper">
                             <img src={Developers} className="dev" alt="" />
                         </div>
+                        
                     </div>
+                    
                 </div>
-                <div className="scrollwrapper">
-                    <a className="scroller" onClick={this.handleOnClick}><img src={Arrow} alt="" /></a>
-                </div>
+               
                 <div className="events" id="hackathon" ref={this.myDivToFocus}>
                     <h1 className="text-center">A Plethora of Competitions</h1>
                     <div className="container">

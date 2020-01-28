@@ -23,6 +23,9 @@
     flex-direction: column;
     align-items: center;
 } */
+.row{
+    /* position: relative; */
+}
 .card{
     border: none;
 }
@@ -51,7 +54,7 @@
     background-color: transparent !important;
     border: 0;
     outline: none !important;
-    margin: 0 auto !important;
+    margin:0 -5px;
 }
 
 .register{
