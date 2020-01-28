@@ -3,10 +3,12 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { SET_HACK_LIST, ADD_TEAM } from "../index";
 
+const BACKEND_URL = "https://daksh2020.herokuapp.com";
+
 export const loginThunk = (email, password) => async (dispatch) => {
   // do backend logic here
   try {
-    const data = await axios.post("/auth/login", { email, password });
+    const data = await axios.post(BACKEND_URL+"/auth/login", { email, password });
     localStorage.setItem('token', data.data.token);
     console.log("From login thunk", data)
     toast.success("Login Success!")
@@ -24,7 +26,7 @@ export const loginThunk = (email, password) => async (dispatch) => {
 export const signupThunk = (data) => async (dispatch) => {
   console.log(data);
   try {
-    const res = await axios.post("/auth/signup", data);
+    const res = await axios.post(BACKEND_URL+"/auth/signup", data);
     console.log(res);
     toast.success("Signed Up Successfully, Login to continue")
     dispatch({
@@ -64,7 +66,7 @@ export const signOut = () => dispatch => {
 
 export const setHackathonList = (hackathons) => (dispatch) => {
   console.log("setHackathonList");
-  axios.get('/events')
+  axios.get(BACKEND_URL+'/events')
     .then(res => {
       console.log(res);
       dispatch({
@@ -82,7 +84,7 @@ export const registerHack = (data) => async dispatch => {
     }
   }
   try {
-    const res = await axios.post('/hackathon/addTeam', data, config);
+    const res = await axios.post(BACKEND_URL+'/hackathon/addTeam', data, config);
     if (res.data.ok) {
       toast.success("Team registered! We'll reach back to you")
     } else {
