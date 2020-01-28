@@ -79,7 +79,6 @@ class Hackathon extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
         hackathons: state.hackathon.hackathons
     }
