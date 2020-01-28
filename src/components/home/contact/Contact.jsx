@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import DakshWhite from "../../../assets/dakshWhite.png";
 import fbWhite from "../../../assets/fbWhite.png";
 import instaWhite from "../../../assets/instaWhite.png";
-import DSC from "../../../assets/dsc.svg"
+import DSC from "../../../assets/dsc-logo.png"
 import DevLove from "../../../assets/devLove.png"
 
 import "./Contact.css"

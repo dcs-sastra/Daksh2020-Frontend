@@ -39,7 +39,7 @@
 }
 
 .dsc-logo-footer {
-    /*width: 16em;*/
+    width: calc(8rem + 5vw);
 }
 
 .dsc-credits {
