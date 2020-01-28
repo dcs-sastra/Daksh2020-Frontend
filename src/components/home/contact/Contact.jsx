@@ -32,7 +32,7 @@ class Contact extends Component {
                                 <p>+91-81064-88664</p>
                             </div>
                             <div className="col text-right">
-                                <h4>Student Secretery</h4>
+                                <h4>Student Secretary</h4>
                                 <p>chairman.daksh@sastra.ac.in</p>
                                 <p>+91-82480-18114</p>
                             </div>

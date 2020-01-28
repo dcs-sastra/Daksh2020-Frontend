@@ -9,7 +9,6 @@ import Arrow from "../../assets/arrow.svg";
 import Fb from "../../assets/fb.svg";
 import Insta from "../../assets/insta.svg";
 
-import TN from "../../assets/hackathon/tn.png";
 import TCS50 from "../../assets/hackathon/tcs50.png";
 import SC from "../../assets/hackathon/sc.png";
 import Genesys from "../../assets/hackathon/genesys.png";
@@ -58,7 +57,6 @@ class Hackathon extends Component {
 
                     <div className="sponsors-group-wrapper">
                         <div className="sponsors-group">
-                            <img src = {TN} className="img-fluid sponsor" />
                             <img src = {TCS50} className="img-fluid sponsor" />
                             <img src = {SC} className="img-fluid sponsor" />
                             <img src = {Genesys} className="img-fluid sponsor" />
