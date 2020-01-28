@@ -10,11 +10,14 @@ class Idea extends Component {
       emails: [],
       team: "",
       email: "",
-      limit: 2,
+      minlimit: 2,
+      maxlimit: 6,
       abstract: "",
       url: ""
     }
     this.handleSubmit = (e) => {
+      if (this.state.emails.length < this.state.minlimit)
+        return
       e.preventDefault();
       const data = {
         "teamName": this.state.team,
@@ -47,7 +50,7 @@ class Idea extends Component {
   }
 
   validateEmail = () => {
-    if (this.state.emails.length > this.state.limit - 1) {
+    if (this.state.emails.length > this.state.maxlimit - 1) {
       document.getElementById("limiter").className = "limit"
       return;
     }
@@ -62,7 +65,7 @@ class Idea extends Component {
     arr.splice(index, 1)
     this.setState({ emails: arr })
 
-    if (this.state.emails.length == this.state.limit - 1) {
+    if (this.state.emails.length == this.state.maxlimit - 1) {
       document.getElementById("limiter").className = "enable"
       this.setState({ email: "" })
     }
@@ -77,7 +80,8 @@ class Idea extends Component {
       emails: [],
       team: "",
       email: "",
-      limit: 2,
+      maxlimit: 6,
+      minlimit: 2,
       abstract: "",
       url: ""
     })
