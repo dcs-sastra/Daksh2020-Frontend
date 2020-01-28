@@ -16,7 +16,7 @@ class Contact extends Component {
                 <div className="row">
                     <div className="col-sm-12 col-md-6">
                         <div className="logo-wrapper text-left">
-                            <img src={DakshWhite} alt="..." />
+                            <img src={DakshWhite} alt="..." id="ft-daksh" />
                         </div>
                     </div>
                     <div className="col-sm-12 col-md-6">
@@ -54,11 +54,14 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
-                <br /><br />
-                <div className="text-center">
-                    <div><img src={DevLove} /></div>
-                    <img className="dsc-logo-footer" src={DSC} />
-                </div>
+                <div className="row">
+                    <div className="col dsc-credits">
+                        <div className="center-image"><img src={DevLove} id="devlove" /></div>
+                        <div className="center-image">
+                            <img className="dsc-logo-footer" src={DSC} />
+                        </div>
+                    </div>
+                </div>                
             </div>
         )
     }
