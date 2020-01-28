@@ -65,10 +65,8 @@ export const signOut = () => dispatch => {
 }
 
 export const setHackathonList = (hackathons) => (dispatch) => {
-  console.log("setHackathonList");
   axios.get(BACKEND_URL+'/events')
     .then(res => {
-      console.log(res);
       dispatch({
         type: SET_HACK_LIST,
         hackathons: res.data.events
