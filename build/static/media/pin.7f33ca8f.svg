@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #37a6b2;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Pin" transform="translate(-213 -766)">
+    <circle id="Ellipse_30" data-name="Ellipse 30" class="cls-1" cx="25" cy="25" r="25" transform="translate(213 766)"/>
+    <g id="pin-2" data-name="pin" transform="translate(158.837 779.605)">
+      <g id="Group_1293" data-name="Group 1293" transform="translate(70.573)">
+        <path id="Path_1209" data-name="Path 1209" class="cls-2" d="M79.013,0a8.45,8.45,0,0,0-8.44,8.44c0,5.776,7.553,14.255,7.875,14.613a.76.76,0,0,0,1.131,0c.322-.358,7.875-8.837,7.875-14.613A8.45,8.45,0,0,0,79.013,0Zm0,12.687A4.247,4.247,0,1,1,83.26,8.44,4.251,4.251,0,0,1,79.013,12.687Z" transform="translate(-70.573)"/>
+      </g>
+    </g>
+  </g>
+</svg>
