@@ -23,6 +23,19 @@ import IdeaPresentation from "../../../assets/events/ideaPresentation.png";
 import "./Main.css"
 
 class Main extends Component {
+    constructor(props){
+        super(props)
+        this.myDivToFocus = React.createRef();
+    }
+    handleOnClick = (event) => {
+        //.current is verification that your element has rendered
+        if(this.myDivToFocus.current){
+            this.myDivToFocus.current.scrollIntoView({ 
+               behavior: "smooth", 
+               block: "nearest"
+            })
+        }
+    }
     render() {
         return (
             <div>
@@ -93,9 +106,9 @@ class Main extends Component {
                     </div>
                 </div>
                 <div className="scrollwrapper">
-                    <a className="scroller" href="#hackathon"><img src={Arrow} alt="" /></a>
+                    <a className="scroller" onClick={this.handleOnClick}><img src={Arrow} alt="" /></a>
                 </div>
-                <div className="events" id="hackathon">
+                <div className="events" id="hackathon" ref={this.myDivToFocus}>
                     <h1 className="text-center">A Plethora of Competitions</h1>
                     <div className="container">
 
