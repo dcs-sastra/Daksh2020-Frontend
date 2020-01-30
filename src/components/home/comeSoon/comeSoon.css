@@ -71,16 +71,41 @@
     margin: 10vh 0;
 }
 
-.subscribe-form {
-    text-align: center;
+#inputB1{
+    
+    width:73%;
+    margin-right:2%;
+    
 }
-
-
+#inputB2 {
+    width:25%
+}
+#inputB2 :hover{
+    cursor: pointer;
+}
 @media only screen and (max-width: 600px) {
     .cs {
         flex-flow: column;
-        width: 45%;
+        width: fit-content;
+        
         margin: 0 auto;
+    }
+    #inputB1{
+    
+        width:90%;
+        margin-left:5%;
+        margin-right: 5%;
+        
+    }
+    #inputB2{
+        
+        text-align:center !important;
+        font-size:large;
+        width:50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 5%;
+
     }
 
 }
