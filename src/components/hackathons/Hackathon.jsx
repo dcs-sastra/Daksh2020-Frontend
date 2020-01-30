@@ -6,14 +6,13 @@ import Contact from "../../components/home/contact/Contact";
 
 import Circles from "../../assets/hackathon/circles.png"
 import Arrow from "../../assets/arrow.svg";
-import Fb from "../../assets/fb.svg";
-import Insta from "../../assets/insta.svg";
 
 import TCS50 from "../../assets/hackathon/tcs50.png";
 import SC from "../../assets/hackathon/sc.png";
 import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
+import TBI from "../../assets/hackathon/tbi.png";
 
 import "./Hackathon.css"
 
@@ -64,6 +63,7 @@ class Hackathon extends Component {
                             <img src = {Genesys} className="img-fluid sponsor" />
                             <img src = {TVS} className="img-fluid sponsor" />
                             <img src = {PayPal} className="img-fluid sponsor" />
+                            <img src = {TBI} className="img-fluid sponsor"/>
                         </div>
                     </div>
                     <div class="row scroller"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>

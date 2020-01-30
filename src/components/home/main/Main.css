@@ -12,17 +12,7 @@
 .width{
     width: 10rem;
 }
-/* .row{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-.main-col{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+
 .row{
     /* position: relative; */
     margin-top: -2.5rem;
@@ -56,6 +46,7 @@
     border: 0;
     outline: none !important;
     margin:0 -5px;
+    margin-left: 50% !important;
 }
 
 .register{

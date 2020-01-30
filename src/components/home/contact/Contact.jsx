@@ -12,7 +12,6 @@ class Contact extends Component {
     render() {
         return (
             <div className="footer">
-
                 <div className="row">
                     <div className="col-sm-12 col-md-6">
                         <div className="logo-wrapper text-left">
@@ -32,9 +31,10 @@ class Contact extends Component {
                                 <p>+91-81064-88664</p>
                             </div>
                             <div className="col text-right">
-                                <h4>Student Secretary</h4>
+                                <h4>Student Secretaries</h4>
                                 <p>chairman.daksh@sastra.ac.in</p>
                                 <p>+91-82480-18114</p>
+                                <p>+91-95660-76126</p>
                             </div>
                         </div>
                         <br />

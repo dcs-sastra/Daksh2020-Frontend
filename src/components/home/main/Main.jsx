@@ -61,14 +61,16 @@ class Main extends Component {
                                                 <p>February 2020</p>
                                                 <p>21,22 & 23</p>
                                             </div>
-                                        
-                                            <div id="box3">
-                                                <img src={Pin} alt="" className="icons" />
-                                            </div>
-                                            <div className="details" id="box4">
-                                                <p>Thanjavur</p>
-                                                <p>SASTRA</p>
-                                            </div>
+                                            <a target="_blank" href="https://goo.gl/maps/D9i434fLiXbLMG149">
+                                                <div id="box3">
+                                                    <img src={Pin} alt="" className="icons" />
+                                                </div>
+                                                <div className="details text-decor" id="box4">
+                                                    <p>Thanjavur</p>
+                                                    <p>SASTRA</p>
+                                                </div>
+                                            </a>
+                                            
                                     </div>
                                    
                                 </div>
