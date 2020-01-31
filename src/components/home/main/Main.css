@@ -12,19 +12,10 @@
 .width{
     width: 10rem;
 }
-/* .row{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-.main-col{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+
 .row{
     /* position: relative; */
+    margin-top: -2.5rem;
 }
 .card{
     border: none;
@@ -55,6 +46,7 @@
     border: 0;
     outline: none !important;
     margin:0 -5px;
+    margin-left: 50% !important;
 }
 
 .register{
@@ -87,7 +79,7 @@
 
 .dev-wrapper img {
     width: 100%;
-    min-width: 400px;
+    /* min-width: 400px; */
 }
 
 .title-wrapper {
@@ -141,7 +133,21 @@
     display: flex;
     flex-flow: column;
 }
-
+#styleRow{
+    display:flex;
+}
+#box1{
+    flex:1;
+}
+#box2{
+    flex:2;
+}
+#box3{
+    flex:1;
+}
+#box4{
+    flex:2;
+}
 .insta {
     width: 30px !important;
     margin: 10px;
@@ -177,4 +183,25 @@
 
 .hackathon-link:hover {
     text-decoration: none;
+}
+
+
+@media (max-width : 460px){
+    #styleRow{
+        flex-wrap: wrap;
+    }
+    #box1{
+        flex:1;
+    }
+    #box2{
+        
+        flex:2;
+    }
+    #box3{
+        
+        flex:1;
+    }
+    #box4{
+        flex:2;
+    }
 }

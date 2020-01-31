@@ -48,25 +48,31 @@ class Main extends Component {
                                 <img src={Daksh} alt="" />
                                 <h4>Build things that matter</h4>
                                 <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
-                                <div className="timings-block">
+                                <div className="timings-block" >
                                     <div>
                                         <a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} alt="" className="insta" /></a>
                                         <a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} alt="" className="insta" /></a>
                                     </div>
-                                    <div>
-                                        <img src={Calendar} alt="" className="icons" />
-                                        <div className="details">
-                                            <p>February 2020</p>
-                                            <p>21,22 & 23</p>
-                                        </div>
+                                    <div id="styleRow">
+                                            <div id="box1">
+                                                <img src={Calendar} alt="" className="icons" />
+                                            </div>
+                                            <div className="details" id="box2">
+                                                <p>February 2020</p>
+                                                <p>21,22 & 23</p>
+                                            </div>
+                                            <a target="_blank" href="https://goo.gl/maps/D9i434fLiXbLMG149">
+                                                <div id="box3">
+                                                    <img src={Pin} alt="" className="icons" />
+                                                </div>
+                                                <div className="details text-decor" id="box4">
+                                                    <p>Thanjavur</p>
+                                                    <p>SASTRA</p>
+                                                </div>
+                                            </a>
+                                            
                                     </div>
-                                    <div>
-                                        <img src={Pin} alt="" className="icons" />
-                                        <div className="details">
-                                            <p>Thanjavur</p>
-                                            <p>SASTRA</p>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                             <div className="scrollwrapper ">

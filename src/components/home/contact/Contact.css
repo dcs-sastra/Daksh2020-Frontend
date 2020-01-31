@@ -66,4 +66,8 @@
     .with-line {
         border-right: none;
     }
+    #ft-daksh {
+        max-width: 60vw;
+        margin-top: 10%;
+    }
 }

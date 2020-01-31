@@ -6,14 +6,13 @@ import Contact from "../../components/home/contact/Contact";
 
 import Circles from "../../assets/hackathon/circles.png"
 import Arrow from "../../assets/arrow.svg";
-import Fb from "../../assets/fb.svg";
-import Insta from "../../assets/insta.svg";
 
 import TCS50 from "../../assets/hackathon/tcs50.png";
 import SC from "../../assets/hackathon/sc.png";
 import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
+import TBI from "../../assets/hackathon/tbi.png";
 
 import "./Hackathon.css"
 
@@ -51,9 +50,10 @@ class Hackathon extends Component {
                     <div class="hacktitle-wrapper">
                         <div class="hacktitle-inner-wrapper">
                             <div class="hackathon-title">Hackathons</div>
+                        
                             <div class="subheading">Our goal is to expose the student community to actual industry and Societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</div>
                             <br />
-                                <a className="btn btn-danger btn-sm" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a>
+                                <a className="btn btn-danger btn" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a>
                         </div>
                     </div>
 
@@ -64,6 +64,7 @@ class Hackathon extends Component {
                             <img src = {Genesys} className="img-fluid sponsor" />
                             <img src = {TVS} className="img-fluid sponsor" />
                             <img src = {PayPal} className="img-fluid sponsor" />
+                            <img src = {TBI} className="img-fluid sponsor"/>
                         </div>
                     </div>
                     <div class="row scroller"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
