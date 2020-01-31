@@ -9,7 +9,7 @@
     padding: 5vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .hacktitle-inner-wrapper {
@@ -159,6 +159,7 @@
 
     .hacktitle-wrapper {
         background-color: rgba(0, 0, 0, 0.3);
+        flex-flow: column;
         justify-content: space-around;
     }
 
@@ -196,5 +197,14 @@
         margin: 10%;
         font-weight: 500;
     }
+    .sastra-logo {
+        width: 300px !important;
+
+    }
+
+}
+
+.sastra-logo {
+    width: 45%;
 
 }

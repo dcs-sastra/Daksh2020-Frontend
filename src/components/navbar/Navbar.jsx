@@ -21,7 +21,7 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand-lg navbar-light" id="navBar">
                 <NavLink className="navbar-brand navbar__brand" to="/">
                     <img src={logo} className="navbar__logo" alt=""></img>
-                    <img src={sastra_logo} alt="" className="sastra_logo" />
+                    {/* <img src={sastra_logo} alt="" className="sastra_logo" /> */}
                 </NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

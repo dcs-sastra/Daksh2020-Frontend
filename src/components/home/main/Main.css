@@ -186,7 +186,7 @@
 }
 
 
-@media (max-width : 460px){
+@media (max-width : 575px){
     #styleRow{
         flex-wrap: wrap;
     }
@@ -194,11 +194,11 @@
         flex:1;
     }
     #box2{
-        
+
         flex:2;
     }
     #box3{
-        
+
         flex:1;
     }
     #box4{

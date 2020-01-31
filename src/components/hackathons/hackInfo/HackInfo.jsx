@@ -50,9 +50,9 @@ class HackInfo extends Component {
 								<div className="my-title">
 									{title}
 								</div>
-								<div className="my-prize">
+								{/* <div className="my-prize">
 									{prize ? `Prize Pool: INR ${prize}` : ''}
-								</div>
+								</div> */}
 							</header>
 							<p className="hack-desc">{description}</p>
 							<div className="btn-grp">

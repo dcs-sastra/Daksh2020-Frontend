@@ -46,7 +46,6 @@ class Main extends Component {
                         <div className="container">
                             <div className="daksh-title">
                                 <img src={Daksh} alt="" />
-                                <img src={sastra_logo} alt="" />
                                 <h4>Build things that matter</h4>
                                 <p>That time of the year is back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
                                 <div className="timings-block" >

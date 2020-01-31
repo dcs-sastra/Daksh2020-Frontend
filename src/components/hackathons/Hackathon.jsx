@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link as Pink } from "react-scroll";
 import { Link } from 'react-router-dom';
+import prize from '../../assets/prize.png'
 
 import Contact from "../../components/home/contact/Contact";
 
@@ -13,6 +14,7 @@ import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
+import sastra from '../../assets/SASTRA_LOGO.jpg'
 
 import "./Hackathon.css"
 
@@ -48,6 +50,7 @@ class Hackathon extends Component {
 
                 <div class="">
                     <div class="hacktitle-wrapper">
+                        <img src={prize} alt="" />
                         <div class="hacktitle-inner-wrapper">
                             <div class="hackathon-title">Hackathons</div>
 
