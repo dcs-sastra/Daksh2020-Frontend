@@ -10,8 +10,8 @@ class Idea extends Component {
       emails: [],
       team: "",
       email: "",
-      minlimit: 2,
-      maxlimit: 5,
+      minlimit: 1,
+      maxlimit: 4,
       abstract: "",
       url: ""
     }
@@ -80,8 +80,8 @@ class Idea extends Component {
       emails: [],
       team: "",
       email: "",
-      maxlimit: 6,
-      minlimit: 2,
+      maxlimit: 4,
+      minlimit: 1,
       abstract: "",
       url: ""
     })
