@@ -6,7 +6,7 @@ import Idea from '../Idea';
 
 import Fb from "../../../assets/fb.svg";
 import Insta from "../../../assets/insta.svg";
-import TimeLine from "../../../assets/hackInfo/timeline.png";
+import TimeLine from "../../../assets/hackInfo/TimeLine.png";
 import Doodle from "../../../assets/hackInfo/Doodle.png";
 import Ripple from "../../../assets/hackInfo/Ripple.png";
 import UpperImage from "../../../assets/hackInfo/UpperImage.png";
@@ -57,7 +57,7 @@ class HackInfo extends Component {
 						<div className="btn-grp">
 							<a className="btn btn-blue" target="_blank" href={ps}>Problem Statement</a>
 							{this.props.authState && <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>}
-							{!this.props.authState && <span> Please Login to Register</span>}							
+							{!this.props.authState && <span> Please Login to Register</span>}
 						</div>
 					</div>
 				</div>

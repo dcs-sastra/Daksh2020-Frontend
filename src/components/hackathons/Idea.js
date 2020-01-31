@@ -18,8 +18,7 @@ class Idea extends Component {
       url: ""
     }
     this.handleSubmit = (e) => {
-      if (this.state.emails.length < this.state.minlimit)
-      {
+      if (this.state.emails.length < this.state.minlimit) {
         toast.error("Minimum 2 people must register for a team")
         return
       }
@@ -66,7 +65,7 @@ class Idea extends Component {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
       this.setState({ emails: [...this.state.emails, this.state.email] })
     }
-    this.setState({email:""})
+    this.setState({ email: "" })
   }
 
   onDelete = (index) => {
@@ -110,7 +109,16 @@ class Idea extends Component {
               </div>
 
               <div class="modal-body">
+                <p><span className="text-secondary">Note : </span>
+                  <ul>
+                    <li>
+                      All teammates must have signed up with their Email Ids in the website.
+                  </li>
+                    <li>
 
+                      You are the team leader for the following hackathon
+                  </li>
+                  </ul></p>
                 <label for="team">Team Name:</label>
                 <input type="text" class="form-control" name="team" placeholder="Team Name" onChange={this.handleChange} name="team" value={this.state.team} />&nbsp;
 
@@ -135,7 +143,11 @@ class Idea extends Component {
                 <input type="text" class="form-control" placeholder="URL" onChange={this.handleChange} name="url" value={this.state.url} />
 
                 <br />
-                <code>Or you can mail your abstract with team name to hackathon.daksh@sastra.ac.in</code>
+                <h5 className="details-title">Or</h5>
+                <p className="email-details"> You can mail your abstract doc with <span className="text-black"><br />Subject : {"<Hackathon_name>"}</span> <br />
+                  Body: {"< Team name and Team details(Phone numbers, Email id and College name)>"} to <a href="mailto:hackathon.daksh@sastra.ac.in">hackathon.daksh@sastra.ac.in
+                </a>
+                </p>
                 <br /><br />
                 <button class="btn btn-danger btn-block" type="submit" onClick={this.handleSubmit}>Submit</button>
 

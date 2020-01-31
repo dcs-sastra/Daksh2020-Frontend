@@ -17,6 +17,7 @@ class MyModel extends React.Component {
       college: '',
       regno: '',
       year: 1,
+      phone: ""
     }
     this.clear = () => {
       this.setState({
@@ -25,7 +26,8 @@ class MyModel extends React.Component {
         password: '',
         college: '',
         regno: '',
-        year: 1
+        year: 1,
+        phone: ""
       })
     }
     this.handleChange = (e) => {
@@ -45,7 +47,8 @@ class MyModel extends React.Component {
           college: this.state.college,
           regNo: this.state.regno,
           password: this.state.password,
-          year: this.state.year
+          year: this.state.year,
+          phone: this.state.phone
         })
       }
       this.props.toggle()
@@ -61,7 +64,7 @@ class MyModel extends React.Component {
 
   render() {
     const { isOpen, toggle } = this.props;
-    const { mode, name, email, password, college, regno, year } = this.state;
+    const { mode, name, email, password, college, regno, year, phone } = this.state;
     if (mode === 'login') {
       return (
         <div>
@@ -130,6 +133,10 @@ class MyModel extends React.Component {
                     <option>3</option>
                     <option>4</option>
                   </Input>
+                  <label for="phone">
+                    Phone
+                  </label>
+                  <Input type="number" name="phone" value={phone} onChange={this.handleChange} required />
                   <br />
                   <Button size="lg" block type="submit" className="login-btn">Dive in   <i className="fas fa-door-open"></i></Button>
                   <div className="redirect" onClick={() => { this.setMode("login"); this.clear() }}>Already have an Account?</div>

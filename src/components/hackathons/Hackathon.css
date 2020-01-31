@@ -27,7 +27,7 @@
 .hackathon-title {
     font-size: 3rem;
     margin: 8%;
-    font-weight: 500;   
+    font-weight: 500;
 }
 
 .right-justify{
@@ -99,6 +99,11 @@
     bottom: 5%;
     left: 5%;
 }*/
+
+.guidelines {
+    width: 40%;
+    font-size: 1.5rem !important;
+}
 .name{
     text-align: right;
     padding: 2%;
@@ -128,7 +133,7 @@
 }
 
 .sponsors-group-wrapper {
-    margin: 5vh 0 1vh 8vmin; 
+    margin: 5vh 0 1vh 8vmin;
 }
 
 .sponsors-group {
@@ -143,10 +148,10 @@
     justify-self: center;
     align-self: center;
 }
-    
+
 
 @media only screen and (max-width: 790px) {
-    
+
     #circle-img {
         width: 550px;
         filter: brightness(60%);
@@ -155,7 +160,7 @@
     .hacktitle-wrapper {
         background-color: rgba(0, 0, 0, 0.3);
         justify-content: space-around;
-    }    
+    }
 
     .hacktitle-inner-wrapper {
         align-items: center;
@@ -170,9 +175,9 @@
         justify-content: flex-start !important;
         margin-top: 40vh !important;
     }
-    
+
     .sponsors-group-wrapper {
-        margin: 20vmax auto 0 auto; 
+        margin: 20vmax auto 0 auto;
     }
 
     .hacklist-page {
@@ -189,7 +194,7 @@
     .hackathon-title {
         font-size: 2rem;
         margin: 10%;
-        font-weight: 500;   
+        font-weight: 500;
     }
-    
+
 }

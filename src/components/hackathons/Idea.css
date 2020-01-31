@@ -71,3 +71,10 @@ input:focus,textarea:focus{
 #myFile{
     padding:10px 0px;
 }
+
+.email-details {
+    font-size: 1.2rem;
+}
+.details-title {
+    text-align: center;
+}

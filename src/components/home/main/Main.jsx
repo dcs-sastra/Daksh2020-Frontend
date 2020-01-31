@@ -12,7 +12,7 @@ import Fb from "../../../assets/fb.svg";
 import Insta from "../../../assets/insta.svg";
 import Arrow from "../../../assets/arrow.svg";
 import Donut from "../../../assets/donutStick.svg";
-
+import sastra_logo from '../../../assets/SASTRA_LOGO.jpg'
 import Hackathons from "../../../assets/events/hackathon.png";
 import RevEngg from "../../../assets/events/revengg.png";
 import TheBTD from "../../../assets/events/thebtd.png";
@@ -23,16 +23,16 @@ import IdeaPresentation from "../../../assets/events/ideaPresentation.png";
 import "./Main.css"
 
 class Main extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.myDivToFocus = React.createRef();
     }
     handleOnClick = (event) => {
         //.current is verification that your element has rendered
-        if(this.myDivToFocus.current){
-            this.myDivToFocus.current.scrollIntoView({ 
-               behavior: "smooth", 
-               block: "nearest"
+        if (this.myDivToFocus.current) {
+            this.myDivToFocus.current.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
             })
         }
     }
@@ -46,37 +46,38 @@ class Main extends Component {
                         <div className="container">
                             <div className="daksh-title">
                                 <img src={Daksh} alt="" />
+                                <img src={sastra_logo} alt="" />
                                 <h4>Build things that matter</h4>
-                                <p>The time of the year has come back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
+                                <p>That time of the year is back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
                                 <div className="timings-block" >
                                     <div>
                                         <a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} alt="" className="insta" /></a>
                                         <a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} alt="" className="insta" /></a>
                                     </div>
                                     <div id="styleRow">
-                                            <div id="box1">
-                                                <img src={Calendar} alt="" className="icons" />
+                                        <div id="box1">
+                                            <img src={Calendar} alt="" className="icons" />
+                                        </div>
+                                        <div className="details" id="box2">
+                                            <p>February 2020</p>
+                                            <p>21,22 & 23</p>
+                                        </div>
+                                        <a target="_blank" href="https://goo.gl/maps/D9i434fLiXbLMG149">
+                                            <div id="box3">
+                                                <img src={Pin} alt="" className="icons" />
                                             </div>
-                                            <div className="details" id="box2">
-                                                <p>February 2020</p>
-                                                <p>21,22 & 23</p>
+                                            <div className="details text-decor" id="box4">
+                                                <p>Thanjavur</p>
+                                                <p>SASTRA</p>
                                             </div>
-                                            <a target="_blank" href="https://goo.gl/maps/D9i434fLiXbLMG149">
-                                                <div id="box3">
-                                                    <img src={Pin} alt="" className="icons" />
-                                                </div>
-                                                <div className="details text-decor" id="box4">
-                                                    <p>Thanjavur</p>
-                                                    <p>SASTRA</p>
-                                                </div>
-                                            </a>
-                                            
+                                        </a>
+
                                     </div>
-                                   
+
                                 </div>
                             </div>
                             <div className="scrollwrapper ">
-                                 <a className="scroller" onClick={this.handleOnClick}><img src={Arrow} alt="" /></a>
+                                <a className="scroller" onClick={this.handleOnClick}><img src={Arrow} alt="" /></a>
                             </div>
                         </div>
                         {/*
@@ -107,17 +108,17 @@ class Main extends Component {
                             </div>
                         </div>
                          */}
-                    
+
                     </div>
                     <div className="col-sm-6">
                         <div className="dev-wrapper">
                             <img src={Developers} className="dev" alt="" />
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-               
+
                 <div className="events" id="hackathon" ref={this.myDivToFocus}>
                     <h1 className="text-center">A Plethora of Competitions</h1>
                     <div className="container">
