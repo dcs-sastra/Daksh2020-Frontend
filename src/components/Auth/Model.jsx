@@ -48,12 +48,15 @@ class MyModel extends React.Component {
           year: this.state.year
         })
       }
+      this.props.toggle()
+      this.clear()
     }
     this.setMode = (val) => {
       this.setState({
         mode: val
       })
     }
+
   }
 
   render() {

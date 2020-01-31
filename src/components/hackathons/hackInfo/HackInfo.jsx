@@ -59,9 +59,6 @@ class HackInfo extends Component {
 							{this.props.authState && <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>}
 							{!this.props.authState && <span> Please Login to Register</span>}							
 						</div>
-						<div>
-							<span>Or you can mail your abstract with team name to hackathon.daksh@sastra.ac.in</span>
-						</div>
 					</div>
 				</div>
 				<Idea title={title} id={id} />
