@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 
 import Fb from "../../../assets/fb.svg";
 import Insta from "../../../assets/insta.svg";
-import TimeLine from "../../../assets/hackInfo/TimeLine.png";
+import TimeLine from "../../../assets/hackInfo/timeline.png";
 import Doodle from "../../../assets/hackInfo/Doodle.png";
 import Ripple from "../../../assets/hackInfo/Ripple.png";
 import UpperImage from "../../../assets/hackInfo/UpperImage.png";

@@ -58,7 +58,7 @@ class Contact extends Component {
                     <div className="col dsc-credits">
                         <div className="center-image"><img src={DevLove} id="devlove" /></div>
                         <div className="center-image">
-                            <img className="dsc-logo-footer" src={DSC} />
+                          <a id="dsc" target="_blank" href="https://www.instagram.com/dsc.sastra.university/?igshid=eqszlf8v2rn9">  <img  className="dsc-logo-footer" src={DSC} /> </a>
                         </div>
                     </div>
                 </div>                
