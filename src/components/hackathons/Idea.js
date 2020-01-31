@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { registerHack } from '../../actions/Thunks/thunk';
 import "./Idea.css"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Idea extends Component {
   constructor(props) {
@@ -17,7 +19,10 @@ class Idea extends Component {
     }
     this.handleSubmit = (e) => {
       if (this.state.emails.length < this.state.minlimit)
+      {
+        toast.error("Minimum 2 people must register for a team")
         return
+      }
       e.preventDefault();
       const data = {
         "teamName": this.state.team,
@@ -28,7 +33,10 @@ class Idea extends Component {
       }
       console.log(data);
       this.props.registerHack(data);
+      toast.success("Successful Registration")
+      console.log(document.getElementById("closer").click())
     }
+    this.clear()
   }
 
   handleChange = (e) => {
@@ -58,6 +66,7 @@ class Idea extends Component {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
       this.setState({ emails: [...this.state.emails, this.state.email] })
     }
+    this.setState({email:""})
   }
 
   onDelete = (index) => {
@@ -97,7 +106,7 @@ class Idea extends Component {
 
               <div class="modal-header">
                 <h4 class="modal-title">Idea Submission</h4>
-                <button type="button" class="close" data-dismiss="modal" onClick={this.clear}>&times;</button>
+                <button type="button" id="closer" class="close" data-dismiss="modal" onClick={this.clear}>&times;</button>
               </div>
 
               <div class="modal-body">
@@ -121,14 +130,13 @@ class Idea extends Component {
                 </div>
 
                 <br />
-                <label for="abstract">Abstract:</label>
-                <textarea type="text" class="form-control" placeholder="Abstract" rows="10" cols="40" onChange={this.handleChange} name="abstract" value={this.state.abstract} />
-                <br />
-                <label for="link">Google Drive URL:</label>
+                <label for="link">Abstract - Google Drive URL:</label>
 
                 <input type="text" class="form-control" placeholder="URL" onChange={this.handleChange} name="url" value={this.state.url} />
 
                 <br />
+                <code>Or you can mail your abstract with team name to hackathon.daksh@sastra.ac.in</code>
+                <br /><br />
                 <button class="btn btn-danger btn-block" type="submit" onClick={this.handleSubmit}>Submit</button>
 
               </div>

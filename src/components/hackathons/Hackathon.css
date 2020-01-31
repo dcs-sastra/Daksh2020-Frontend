@@ -26,6 +26,7 @@
 
 .hackathon-title {
     font-size: 3rem;
+    margin: 8%;
     font-weight: 500;   
 }
 
@@ -185,5 +186,10 @@
     .sponsor {
         padding: 1vw;
     }
-
+    .hackathon-title {
+        font-size: 2rem;
+        margin: 10%;
+        font-weight: 500;   
+    }
+    
 }
