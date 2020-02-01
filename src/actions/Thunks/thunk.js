@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { SET_HACK_LIST, ADD_TEAM, SUBSCRIBE } from "../index";
 
-const BACKEND_URL = "";//https://daksh2020.herokuapp.com";
+const BACKEND_URL = "https://daksh2020.herokuapp.com";
 
 export const loginThunk = (email, password) => async (dispatch) => {
   // do backend logic here
