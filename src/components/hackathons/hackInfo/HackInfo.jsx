@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { setHackathonList } from '../../../actions/Thunks/thunk';
 import Idea from '../Idea';
+import { toast } from 'react-toastify';
 
 
 import Fb from "../../../assets/fb.svg";
@@ -21,13 +22,13 @@ class HackInfo extends Component {
 
 	render() {
 
-		let title, description, poster, id, ps;
+		let title, description, poster, id, ps, prize;
 		if (this.props.hackathons) {
 			for (let i = 0; i < this.props.hackathons.length; ++i) {
 				const hackItem = this.props.hackathons[i];
 				console.log(hackItem);
 				if (hackItem._id === this.props.match.params.id)
-					[title, description, poster, id, ps] = [hackItem.title, hackItem.description, hackItem.poster, hackItem._id, hackItem.problemStatement];
+					[title, description, poster, id, ps, prize] = [hackItem.title, hackItem.description, hackItem.poster, hackItem._id, hackItem.problemStatement, hackItem.prize];
 			}
 
 		}
@@ -37,7 +38,7 @@ class HackInfo extends Component {
 				<img src={UpperImage} id="upper-image" />
 				<img src={Ripple} id="ripple" />
 				<img src={Doodle} id="doodle" />
-				<div className="social">
+				<div className="my-social">
 					<a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} className="social-icon" /></a>
 					<a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} className="social-icon" /></a>
 					<div className="line" />
@@ -45,8 +46,23 @@ class HackInfo extends Component {
 				<div className="hackinfo-area">
 					<div className="top-part row">
 						<div className="hack-text col-md-8">
-							<header className="my-title">{title}</header>
+							<header className="my-header">
+								<div className="my-title">
+									{title}
+								</div>
+								{/* <div className="my-prize">
+									{prize ? `Prize Pool: INR ${prize}` : ''}
+								</div> */}
+							</header>
 							<p className="hack-desc">{description}</p>
+							<div className="btn-grp">
+								<a className="btn btn-blue" target="_blank" href={ps}>Problem Description</a>
+								{
+									this.props.authState
+										? <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>
+										: <button className="btn btn-red" onClick={() => { toast.error("Please login to register for hackathons") }}>Register</button>
+								}
+							</div>
 						</div>
 						<div className="col-md-4 poster-wrapper">
 							<img src={poster} className="img-fluid poster rounded" />
@@ -54,14 +70,6 @@ class HackInfo extends Component {
 					</div>
 					<div className="bottom-part">
 						<img id="timeline" src={TimeLine} className="img-fluid" />
-						<div className="btn-grp">
-							<a className="btn btn-blue" target="_blank" href={ps}>Problem Statement</a>
-							{this.props.authState && <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>}
-							{!this.props.authState && <span> Please Login to Register</span>}							
-						</div>
-						<div>
-							<span>Or you can mail your abstract with team name to hackathon.daksh@sastra.ac.in</span>
-						</div>
 					</div>
 				</div>
 				<Idea title={title} id={id} />

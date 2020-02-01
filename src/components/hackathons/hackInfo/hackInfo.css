@@ -2,11 +2,27 @@
 	margin: 10vmax 10vmin 0px 10vmin;
 }
 
+.my-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1.3em;
+	padding-right: 5%;
+}
+
 .my-title {
 	font-size: 1.5em;
-	margin-bottom: 1.3em;
 	font-weight: bold;
+	margin: 2%;
 }
+
+.my-prize {
+	font-size: 1.2em;
+	font-weight: bold;	
+	margin: 2%;
+}
+
 .hack-desc {
 	color: black;
 	padding: 0px;
@@ -32,7 +48,7 @@
 .btn-grp {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin-bottom: 5vh;
 }
@@ -84,25 +100,25 @@
 	justify-content: center;
 }
 
-.social {
+.my-social {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
 	bottom: 2vh;
-	left: 0px;
+	left: 2vw;
 	height: 30vh;
 }
 
 .social-icon {
-	width: 3vw;
-	margin: 1.3vmax 0px;
+	width: 2vmax;
+	margin: 1.3vw 0px;
 }
 
 .line {
 	width: 0.3vw;
 	height: 8vh;
 	background-color: #ff5353;
-	margin: 1.3vmax 0px;
+	/*margin: 1.3vmax 0px;*/
 }
