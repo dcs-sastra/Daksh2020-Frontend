@@ -26,13 +26,11 @@ class Idea extends Component {
       const data = {
         "teamName": this.state.team,
         "teamMatesEmail": this.state.emails,
-        "ideaInConcise": this.state.abstract,
         "documentLink": this.state.url,
         "eventId": this.props.id
       }
       console.log(data);
       this.props.registerHack(data);
-      toast.success("Successful Registration")
       console.log(document.getElementById("closer").click())
     }
     this.clear()
