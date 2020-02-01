@@ -1,8 +1,30 @@
 import React, { Component } from "react";
 import "./comeSoon.css"
-
+import { subscribe } from '../../../actions/Thunks/thunk';
+import { connect } from 'react-redux';
 
 class ComeSoon extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: ''
+        }
+        this.handleSubmit = (e) => {
+            e.preventDefault();
+            console.log(this.state);
+            this.props.subscribe(this.state.email);
+         }
+        // this.handleSubmit = (e) => async() => {
+        //     e.preventDefault();
+            
+            
+        // }
+        this.handleChange = (e) => {
+            this.setState({
+              email: e.target.value
+            })
+        }
+    }
     render() {
         return (
             <div>
@@ -35,8 +57,10 @@ class ComeSoon extends Component {
                     <p class="text-secondary">Hey, with Daksh around the corner, don't waste time looking up for the site. Type in your email and we'll keep you posted. </p>
                     <br />
                     <div class="container subscribe-form" >
-                        <input type="email" className="subscribe" placeholder="Your email" id="inputB1" />
-                        <button type="submit" className="subscribe-btn" id="inputB2">Subscribe</button>
+                        <form onSubmit={this.handleSubmit}>
+                            <input type="email" name="email" className="subscribe" placeholder="Your email" id="inputB1" onChange={this.handleChange} value={this.state.email} required/>
+                            <button type="submit" className="subscribe-btn" id="inputB2">Subscribe</button>
+                        </form>
                     </div>
                     <br /> <br /><br />
                 </div>
@@ -44,5 +68,12 @@ class ComeSoon extends Component {
         )
     }
 }
+// const mapStateToProps = state => {
+//     return {
+//         email: state.email
+//     }
+// }
 
-export default ComeSoon;
+
+export default connect(null, { subscribe })(ComeSoon);
+// export default ComeSoon;

@@ -1,9 +1,9 @@
 import actions from '../index';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { SET_HACK_LIST, ADD_TEAM } from "../index";
+import { SET_HACK_LIST, ADD_TEAM, SUBSCRIBE } from "../index";
 
-const BACKEND_URL = "https://daksh2020.herokuapp.com";
+const BACKEND_URL = "";//https://daksh2020.herokuapp.com";
 
 export const loginThunk = (email, password) => async (dispatch) => {
   // do backend logic here
@@ -94,4 +94,18 @@ export const registerHack = (data) => async dispatch => {
     console.log(err.response)
     toast.error(err.response.data.message);
   }
+}
+
+export const subscribe = (email) => async (dispatch) => {
+  try {
+    const data = await axios.post(BACKEND_URL+"/subscribeEmail", { email });
+    toast.success("Subscribe Success!")
+    dispatch({
+      type: SUBSCRIBE,
+      data: data.data
+    })
+  } catch (err) {
+    toast.error(err.response.data);
+  }
+
 }
