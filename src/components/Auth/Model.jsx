@@ -113,7 +113,7 @@ class MyModel extends React.Component {
                 </label>
                   <input type="email" name="email" className="form-control" value={email} onChange={this.handleChange} required />
                   <label for="password">
-                    Password
+                    Set New Password
                 </label>
                   <input type="password" name="password" className="form-control" value={password} onChange={this.handleChange} required />
                   <label for="name">
