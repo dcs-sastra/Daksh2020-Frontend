@@ -35,20 +35,21 @@
 
 .scrollwrapper {
     width: 5%;
-    margin: 0 auto !important;
+    margin-left: 93% ;
+    /* margin: 0 auto !important; */
 }
 .scrollwrapper :hover{
     cursor: pointer;
+    
 }
 .scroller {
+    margin-top : -1.5rem !important;
     width: 0  !important;
     background-color: transparent !important;
     border: 0;
     outline: none !important;
-    margin:0 -5px;
-    margin-left: 50% !important;
-}
 
+}
 .register{
     border-style: solid;
     border-color: black;
@@ -90,7 +91,10 @@
 
 .daksh-title {
     width: 70%;
-    margin: 7vh auto !important;
+    margin-top: 7vh  !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    margin-bottom: 0px !important;
 
 }
 
@@ -156,7 +160,10 @@
 @media only screen and (max-width: 600px) {
     .daksh-title {
         width: 90%;
-        margin: 7vh auto !important;
+        margin-top: 7vh  !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+        margin-bottom: 0px !important;
 
     }
     .daksh-title img {
@@ -164,6 +171,9 @@
     }
     .circleWrapper{
        display: none;
+    }
+    .scrollwrapper{
+        margin-left: 40%;
     }
 }
 
@@ -203,5 +213,8 @@
     }
     #box4{
         flex:2;
+    }
+    .scrollwrapper{
+        margin-left: 30%;
     }
 }
