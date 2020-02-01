@@ -28,3 +28,18 @@
 .sastra_logo {
     width: 10%;
 }
+
+.navbar__brand {
+    width: 70% !important;
+}
+
+@media only screen and (max-width : 575px){
+    .navbar__logo {
+        width: 40% !important;
+    }
+}
+
+
+.navbar__logo {
+    width: 20%;
+}

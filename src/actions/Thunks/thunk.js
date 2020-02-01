@@ -7,17 +7,24 @@ const BACKEND_URL = "https://daksh2020.herokuapp.com";
 
 export const loginThunk = (email, password) => async (dispatch) => {
   // do backend logic here
+  let toastId = null
   try {
-    const data = await axios.post(BACKEND_URL+"/auth/login", { email, password });
+    toastId = toast("Logging in, please wait!", { autoClose: false })
+    const data = await axios.post(BACKEND_URL + "/auth/login", { email, password });
     localStorage.setItem('token', data.data.token);
     console.log("From login thunk", data)
-    toast.success("Login Success!")
+    toast.update(toastId, {
+      type: toast.TYPE.SUCCESS, autoClose: 5000, className: "rotateY animated", render: "Login Success!"
+    })
     dispatch({
       type: actions.LOGIN,
       data: data.data
     })
   } catch (err) {
-    toast.error(err.response.data);
+    // toast.update.error(err.response.data);
+    toast.update(toastId, {
+      type: toast.TYPE.ERROR, autoClose: 5000, className: "rotateY animated", render: err.response.data || "Couldn't connect, Please try again"
+    })
   }
 
 }
@@ -25,17 +32,25 @@ export const loginThunk = (email, password) => async (dispatch) => {
 
 export const signupThunk = (data) => async (dispatch) => {
   console.log(data);
+  let toastId = null
   try {
-    const res = await axios.post(BACKEND_URL+"/auth/signup", data);
+    toastId = toast("Logging in, please wait!", { autoClose: false })
+
+    const res = await axios.post(BACKEND_URL + "/auth/signup", data);
     console.log(res);
-    toast.success("Signed Up Successfully, Login to continue")
+
+    toast.update(toastId, {
+      type: toast.TYPE.SUCCESS, autoClose: 5000, render: "Signup Success! Please login to continue", className: "rotateY animated"
+    })
     dispatch({
       type: actions.SIGNUP,
       data: "Signed up"
     })
   } catch (err) {
     console.log(err.response)
-    toast.error(err.response.data)
+    toast.update(toastId, {
+      type: toast.TYPE.ERROR, autoClose: 5000, className: "rotateY animated", render: err.response.data || "Couldn't connect, Please try again"
+    })
   }
 }
 
@@ -65,7 +80,7 @@ export const signOut = () => dispatch => {
 }
 
 export const setHackathonList = (hackathons) => (dispatch) => {
-  axios.get(BACKEND_URL+'/events')
+  axios.get(BACKEND_URL + '/events')
     .then(res => {
       dispatch({
         type: SET_HACK_LIST,
@@ -76,15 +91,19 @@ export const setHackathonList = (hackathons) => (dispatch) => {
 }
 
 export const registerHack = (data) => async dispatch => {
+  let toastId = null
   const config = {
     headers: {
       "auth-token": localStorage.getItem('token')
     }
   }
   try {
-    const res = await axios.post(BACKEND_URL+'/hackathon/addTeam', data, config);
+    toastId = toast("Registering.....", { autoClose: false })
+    const res = await axios.post(BACKEND_URL + '/hackathon/addTeam', data, config);
     if (res.data.ok) {
-      toast.success("Team registered! We'll reach back to you")
+      toast.update(toastId, {
+        type: toast.TYPE.SUCCESS, autoClose: 5000, render: "Team registered! We'll reach back to you", className: "rotateY animated"
+      })
     } else {
     }
     dispatch({
@@ -92,6 +111,9 @@ export const registerHack = (data) => async dispatch => {
     })
   } catch (err) {
     console.log(err.response)
-    toast.error(err.response.data.message);
+    // toast.error(err.response.data.message);
+    toast.update(toastId, {
+      type: toast.TYPE.ERROR, autoClose: 5000, className: "rotateY animated", render: err.response.message || "Couldn't connect, Please try again"
+    })
   }
 }
