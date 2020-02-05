@@ -9,6 +9,8 @@ import FinalPitch from '../finalPitch/FinalPitch';
 import FoxHunt from '../foxHunt/FoxHunt';
 import IdeaPres from '../ideaPres/IdeaPres';
 
+import Reverse from '../Reverse/Reverse';
+import Reverseinfo from '../Reverse/Reverseinfo/Reverseinfo';
 
 
 export default function Routes(){
@@ -21,6 +23,8 @@ export default function Routes(){
             <Route path='/finalPitch' component={FinalPitch} />
             <Route path='/foxHunt' component={FoxHunt} />
             <Route path='/ideaPres' component={IdeaPres} />
+            <Route exact path='/reverse' component= {Reverse}/>
+            <Route path='/reverse/:id' component={Reverseinfo} />
         </Switch>
     )
 }
