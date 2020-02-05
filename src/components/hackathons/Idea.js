@@ -113,15 +113,17 @@ class Idea extends Component {
                       All teammates must have signed up with their Email Ids in the website.
                   </li>
                     <li>
-
                       You are the team leader for the following hackathon
+                  </li>
+                    <li>
+                      Add your team mates Email Id below
                   </li>
                   </ul></p>
                 <label for="team">Team Name:</label>
                 <input type="text" class="form-control" name="team" placeholder="Team Name" onChange={this.handleChange} name="team" value={this.state.team} />&nbsp;
 
                 <br />
-                <label for="emails">Email IDs:</label>
+                <label for="emails">Team mates Email IDs:</label>
                 <div>
                   <ul>
                     {this.state.emails.map((data, index) => <li key={index}><span class="comps">{data}</span> <span class="closer" onClick={() => this.onDelete(index)}>&times;</span></li>)}
@@ -129,7 +131,7 @@ class Idea extends Component {
                 </div>
                 <br />
                 <div class="input-group" id="limiter">
-                  <input type="email" class="form-control" placeholder="Your email" onChange={this.handleEmail} name="emails" value={this.state.email} />
+                  <input type="email" class="form-control" placeholder="Team Mates email" onChange={this.handleEmail} name="emails" value={this.state.email} />
                   <div className="input-group-append">
                     <button type="button" class="btn btn-danger btn-circle btn" onClick={this.validateEmail}><b>+</b></button>
                   </div>
