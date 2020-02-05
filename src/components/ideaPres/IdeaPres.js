@@ -16,32 +16,25 @@ import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
 import sastra from '../../assets/SASTRA_LOGO.jpg'
 
-import "./Hackathon.css"
-
 import { connect } from 'react-redux';
-import { setHackathonList } from '../../actions/Thunks/thunk';
 
-class Hackathon extends Component {
-
-    componentDidMount() {
-        this.props.setHackathonList();
-    }
+class IdeaPres extends Component {
 
     render() {
-        const match = this.props.match;
-        let hackthonElements = [];
-        if (this.props.hackathons) {
-            for (let i = 0; i < this.props.hackathons.length; ++i) {
-                let setBg = {
-                    backgroundImage: `url(${this.props.hackathons[i].poster})`
-                };
-                hackthonElements.push(
-                    <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
-                        <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
-                    </Link>
-                );
-            }
-        }
+        // const match = this.props.match;
+        // let hackthonElements = [];
+        // if (this.props.hackathons) {
+        //     for (let i = 0; i < this.props.hackathons.length; ++i) {
+        //         let setBg = {
+        //             backgroundImage: `url(${this.props.hackathons[i].poster})`
+        //         };
+        //         hackthonElements.push(
+        //             <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
+        //                 <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
+        //             </Link>
+        //         );
+        //     }
+        // }
 
         return (
             <div className="hacklist-page">
@@ -52,9 +45,9 @@ class Hackathon extends Component {
                     <div class="hacktitle-wrapper">
                         <img src={prize} alt="" />
                         <div class="hacktitle-inner-wrapper">
-                            <div class="hackathon-title">Hackathons</div>
+                            <div class="hackathon-title">{this.props.ideaPres.title}</div>
 
-                            <div class="subheading">Our goal is to expose the student community to actual industry and societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</div>
+                            <div class="subheading">{this.props.ideaPres.description}</div>
                             <br />
                             <a className="btn btn-danger guidelines" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a>
                         </div>
@@ -74,10 +67,10 @@ class Hackathon extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="container hacklist-wrapper">
+                {/*<div class="container hacklist-wrapper">
                     <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Hackathons</h1></div>
                     <div class="row align-items-center justify-content-center">{hackthonElements}</div>
-                </div>
+                </div>*/}
                 <Contact></Contact>
             </div>
         )
@@ -86,8 +79,8 @@ class Hackathon extends Component {
 
 const mapStateToProps = state => {
     return {
-        hackathons: state.hackathon.hackathons
+        ideaPres: state.otherEvents.ideaPres
     }
 }
 
-export default connect(mapStateToProps, { setHackathonList })(Hackathon);
+export default connect(mapStateToProps)(IdeaPres);
