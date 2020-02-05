@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div class="contain">
-          <ToastContainer />
+          <ToastContainer toastClassName="large-toast" />
           <Navbar />
           <Routes />
         </div>

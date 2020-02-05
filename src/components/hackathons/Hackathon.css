@@ -3,13 +3,13 @@
 }
 
 .hacktitle-wrapper{
-    margin-top: 4vh;
+    margin-top: 1vh;
     color: white;
     background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) );
     padding: 5vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .hacktitle-inner-wrapper {
@@ -27,9 +27,15 @@
 .hackathon-title {
     font-size: 3rem;
     margin: 8%;
-    font-weight: 500;   
+    font-weight: 500;
 }
-
+#hackArrow{
+    position: absolute;
+    margin-left: 80% !important;
+}
+#hackArrow :hover{
+    cursor: pointer;
+}
 .right-justify{
     text-align: right;
 }
@@ -99,6 +105,11 @@
     bottom: 5%;
     left: 5%;
 }*/
+
+.guidelines {
+    width: 40%;
+    font-size: 1.5rem !important;
+}
 .name{
     text-align: right;
     padding: 2%;
@@ -128,7 +139,7 @@
 }
 
 .sponsors-group-wrapper {
-    margin: 5vh 0 1vh 8vmin; 
+    margin: 2vh 0 1vh 8vmin;
 }
 
 .sponsors-group {
@@ -143,10 +154,10 @@
     justify-self: center;
     align-self: center;
 }
-    
+
 
 @media only screen and (max-width: 790px) {
-    
+
     #circle-img {
         width: 550px;
         filter: brightness(60%);
@@ -154,8 +165,9 @@
 
     .hacktitle-wrapper {
         background-color: rgba(0, 0, 0, 0.3);
+        flex-flow: column;
         justify-content: space-around;
-    }    
+    }
 
     .hacktitle-inner-wrapper {
         align-items: center;
@@ -170,9 +182,9 @@
         justify-content: flex-start !important;
         margin-top: 40vh !important;
     }
-    
+
     .sponsors-group-wrapper {
-        margin: 20vmax auto 0 auto; 
+        margin: 0 auto 0 auto;
     }
 
     .hacklist-page {
@@ -189,7 +201,38 @@
     .hackathon-title {
         font-size: 2rem;
         margin: 10%;
-        font-weight: 500;   
+        font-weight: 500;
     }
-    
+    .sastra-logo {
+        width: 300px !important;
+
+    }
+
 }
+
+.sastra-logo {
+    width: 45%;
+}
+    #hackArrow{
+        position: relative;
+        margin-top: 5% !important;
+        margin-left:40% !important;
+        margin-bottom: 15% !important;
+    }
+    @media only screen and (max-width:530px){
+        #hackArrow{
+           position: relative;
+            margin-top: 5% !important;
+            margin-left:33.5% !important;
+             margin-right: auto !important;
+            margin-bottom: 15% !important;
+        }
+
+        .hackathon-title {
+            font-size: 2rem;
+            margin: 10%;
+            font-weight: 500;
+        }
+
+
+    }

@@ -50,19 +50,19 @@ class HackInfo extends Component {
 								<div className="my-title">
 									{title}
 								</div>
-								<div className="my-prize">
-									{prize ? `Prize Pool: INR ${prize}` : ''} 
-								</div>
+								{/* <div className="my-prize">
+									{prize ? `Prize Pool: INR ${prize}` : ''}
+								</div> */}
 							</header>
 							<p className="hack-desc">{description}</p>
 							<div className="btn-grp">
 								<a className="btn btn-blue" target="_blank" href={ps}>Problem Description</a>
 								{
-									this.props.authState 
-											? <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>
-											: <button className="btn btn-red" onClick={() => {toast.error("Please login to register for hackathons")}}>Register</button>
+									this.props.authState
+										? <button className="btn btn-red" data-toggle="modal" data-target="#hackregister">Register</button>
+										: <button className="btn btn-red" onClick={() => { toast.error("Please login to register for hackathons") }}>Register</button>
 								}
-							</div>	
+							</div>
 						</div>
 						<div className="col-md-4 poster-wrapper">
 							<img src={poster} className="img-fluid poster rounded" />

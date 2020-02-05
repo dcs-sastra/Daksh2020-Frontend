@@ -2,3 +2,8 @@ html, body {
   width: 100vw !important;
   overflow-x: hidden;
 }
+
+.large-toast {
+  width: 100vw !important;
+  height: 50px !important;
+}
