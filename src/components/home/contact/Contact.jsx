@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import DakshWhite from "../../../assets/dakshWhite.png";
 import fbWhite from "../../../assets/fbWhite.png";
 import instaWhite from "../../../assets/instaWhite.png";
-import DSC from "../../../assets/dsc-logo.png"
+import DSC from "../../../assets/dsc-logo-1.png"
 import DevLove from "../../../assets/devLove.png"
 
 import "./Contact.css"
@@ -58,10 +58,10 @@ class Contact extends Component {
                     <div className="col dsc-credits">
                         <div className="center-image"><img src={DevLove} id="devlove" /></div>
                         <div className="center-image">
-                          <a id="dsc" target="_blank" href="https://www.instagram.com/dsc.sastra.university/?igshid=eqszlf8v2rn9">  <img  className="dsc-logo-footer" src={DSC} /> </a>
+                            <a id="dsc" target="_blank" href="https://www.instagram.com/dsc.sastra.university/?igshid=eqszlf8v2rn9">  <img className="dsc-logo-footer" src={DSC} /> </a>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         )
     }

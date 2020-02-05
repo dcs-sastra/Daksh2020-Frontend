@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from '../../assets/Daksh_SASTRA.png';
+import logo from '../../assets/Daksh_SASTRA-1.png';
 import sastra_logo from '../../assets/SASTRA_LOGO.jpg'
 import MyModel from '../Auth/Model'
 import { NavLink } from 'react-router-dom';
