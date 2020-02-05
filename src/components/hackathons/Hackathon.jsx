@@ -61,7 +61,7 @@ class Hackathon extends Component {
                     </div>
 
                     <div className="sponsors-group-wrapper">
-                    <div class="row scroller" id = "hackArrow"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
+                        <div class="row scroller" id="hackArrow"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
                         <div className="sponsors-group">
                             <img src={TCS50} className="img-fluid sponsor" />
                             <img src={SC} className="img-fluid sponsor" />
@@ -84,7 +84,7 @@ class Hackathon extends Component {
 
 const mapStateToProps = state => {
     return {
-        hackathons: state.hackathon.hackathons
+        hackathons: state.otherEvents.workshops
     }
 }
 

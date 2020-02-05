@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link as Pink } from "react-scroll";
 import { Link } from 'react-router-dom';
-import prize from '../../assets/prize.png'
 
-import Contact from "../../components/home/contact/Contact";
+
+import Contact from "../home/contact/Contact";
 
 import Circles from "../../assets/hackathon/circles.png"
 import Arrow from "../../assets/arrow.svg";
@@ -16,28 +16,28 @@ import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
 import sastra from '../../assets/SASTRA_LOGO.jpg'
 
-import "./workshop.css"
+import "../hackathons/Hackathon.css"
 
 import { connect } from 'react-redux';
-import { setWorkshopList } from '../../actions/Thunks/thunk';
+//import { setWorkshopList } from '../../actions/Thunks/thunk';
 
 class Workshop extends Component {
 
-  componentDidMount() {
-    this.props.setWorkshopList();
-  }
+  // componentDidMount() {
+  //   this.props.setWorkshopList();
+  // }
 
   render() {
     const match = this.props.match;
-    let hackthonElements = [];
-    if (this.props.hackathons) {
-      for (let i = 0; i < this.props.hackathons.length; ++i) {
+    let workshopElements = [];
+    if (this.props.workshops) {
+      for (let i = 0; i < this.props.workshops.events.length; ++i) {
         let setBg = {
-          backgroundImage: `url(${this.props.hackathons[i].poster})`
+          backgroundImage: `url(${this.props.workshops.events[i].imageLink})`
         };
-        hackthonElements.push(
-          <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
-            <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
+        workshopElements.push(
+          <Link to={`/workshop/${this.props.workshops.events[i].id}`} className="my-card-link col-md-3 inlay" style={setBg}>
+            <div class="name"><h4>{this.props.workshops.events[i].title}</h4></div>
           </Link>
         );
       }
@@ -49,14 +49,14 @@ class Workshop extends Component {
         <div class="circles"><img src={Circles} alt="" id="circle-img" /></div>
 
         <div class="">
-          <div class="hacktitle-wrapper">
-            <img src={prize} alt="" />
-            <div class="hacktitle-inner-wrapper">
-              <div class="hackathon-title">Hackathons</div>
+          <div class="hacktitle-wrapper" id="workshop-title">
 
-              <div class="subheading">Our goal is to expose the student community to actual industry and societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</div>
+            <div class="hacktitle-inner-wrapper">
+              <div class="hackathon-title">Workshops</div>
+
+              <div class="subheading">{this.props.workshops.description}</div>
               <br />
-              <a className="btn btn-danger guidelines" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a>
+              {/* <a className="btn btn-danger guidelines" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a> */}
             </div>
           </div>
 
@@ -73,8 +73,8 @@ class Workshop extends Component {
           </div>
         </div>
         <div class="container">
-          <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Hackathons</h1></div>
-          <div class="row align-items-center justify-content-center">{hackthonElements}</div>
+          <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Workshops</h1></div>
+          <div class="row align-items-center justify-content-center">{workshopElements}</div>
         </div>
         <Contact></Contact>
       </div>
@@ -84,8 +84,8 @@ class Workshop extends Component {
 
 const mapStateToProps = state => {
   return {
-    hackathons: state.hackathon.hackathons
+    workshops: state.otherEvents.workshop
   }
 }
 
-export default connect(mapStateToProps, { setHackathonList })(Hackathon);
+export default connect(mapStateToProps)(Workshop);
