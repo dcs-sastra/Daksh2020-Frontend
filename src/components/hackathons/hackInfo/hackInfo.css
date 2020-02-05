@@ -1,3 +1,5 @@
+
+
 .hackinfo-area {
 	margin: 10vmax 10vmin 0px 10vmin;
 }
@@ -111,6 +113,10 @@
 	height: 30vh;
 }
 
+.my-social-revinfo{
+	bottom: 25vh !important
+}
+
 .social-icon {
 	width: 2vmax;
 	margin: 1.3vw 0px;
@@ -121,4 +127,9 @@
 	height: 8vh;
 	background-color: #ff5353;
 	/*margin: 1.3vmax 0px;*/
+}
+
+.revinfo-title
+{
+	padding: 10px;
 }

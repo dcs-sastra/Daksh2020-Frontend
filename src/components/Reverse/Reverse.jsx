@@ -16,28 +16,21 @@ import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
 import sastra from '../../assets/SASTRA_LOGO.jpg'
 
-import "./Hackathon.css"
-
 import { connect } from 'react-redux';
-import { setHackathonList } from '../../actions/Thunks/thunk';
 
-class Hackathon extends Component {
-
-    componentDidMount() {
-        this.props.setHackathonList();
-    }
+class Reverse extends Component {
 
     render() {
-        const match = this.props.match;
-        let hackthonElements = [];
-        if (this.props.hackathons) {
-            for (let i = 0; i < this.props.hackathons.length; ++i) {
+
+        let eventJs = [];
+        if (this.props.Reverse) {
+            for (let i = 0; i < this.props.Reverse.events.length; ++i) {
                 let setBg = {
-                    backgroundImage: `url(${this.props.hackathons[i].poster})`
+                    backgroundImage: `url(${this.props.Reverse.events[i].imageLink})`
                 };
-                hackthonElements.push(
-                    <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
-                        <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
+                eventJs.push(
+                    <Link to={`/reverse/${this.props.Reverse.events[i].id}`} className="my-card-link col-md-3 inlay" style={setBg}>
+                        <div class="name"><h4>{this.props.Reverse.events[i].title}</h4></div>
                     </Link>
                 );
             }
@@ -52,16 +45,14 @@ class Hackathon extends Component {
                     <div class="hacktitle-wrapper">
                         <img src={prize} alt="" />
                         <div class="hacktitle-inner-wrapper">
-                            <div class="hackathon-title">Hackathons</div>
+                            <div class="hackathon-title">{this.props.Reverse.title}</div>
 
-                            <div class="subheading">Our goal is to expose the student community to actual industry and societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.</div>
-                            <br />
-                            <a className="btn btn-danger guidelines" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a>
+                            <div class="subheading">{this.props.Reverse.description}</div>
                         </div>
                     </div>
 
                     <div className="sponsors-group-wrapper">
-                        <div class="row scroller" id="hackArrow"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
+                    <div class="row scroller" id = "hackArrow"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
                         <div className="sponsors-group">
                             <img src={TCS50} className="img-fluid sponsor" />
                             <img src={SC} className="img-fluid sponsor" />
@@ -72,9 +63,9 @@ class Hackathon extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="container hacklist-wrapper">
-                    <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Hackathons</h1></div>
-                    <div class="row align-items-center justify-content-center">{hackthonElements}</div>
+                <div class="container">
+                    <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">{this.props.Reverse.title}</h1></div>
+                    <div class="row align-items-center justify-content-center">{eventJs}</div>
                 </div>
                 <Contact></Contact>
             </div>
@@ -84,8 +75,8 @@ class Hackathon extends Component {
 
 const mapStateToProps = state => {
     return {
-        hackathons: state.otherEvents.workshops
+        Reverse: state.otherEvents.reverse
     }
 }
 
-export default connect(mapStateToProps, { setHackathonList })(Hackathon);
+export default connect(mapStateToProps)(Reverse);
