@@ -119,7 +119,7 @@ class Main extends Component {
                 </div>
 
                 <div className="events" id="hackathon" ref={this.myDivToFocus}>
-                    <h1 className="text-center">A Plethora of Competitions</h1>
+                    <h1 className="text-center" id="plethora">A Plethora of Competitions</h1>
                     <div className="container">
 
                         <div className="row text-center">
@@ -132,29 +132,39 @@ class Main extends Component {
                             </div>
 
                             <div className="col-md-4 col-sm-6 all-events">
-                                <img src={RevEngg} className="card-img-top" alt="" />
-                                <h5 class="card-title">Reverse Engineering</h5>
-                                <div class="card-text lead">Coming Soon</div>
+                                <Linker className="hackathon-link" to="/reverse">
+                                    <img src={RevEngg} className="card-img-top" alt="" />
+                                    <h5 class="card-title">Reverse Engineering</h5>
+                                    <div class="card-text lead">Coming Soon</div>
+                                </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
-                                <img src={TheBTD} className="card-img-top" alt="" />
-                                <h5 class="card-title">The Big Tech Debate</h5>
-                                <div class="card-text lead">Coming Soon</div>
+                                <Linker className="hackathon-link" to="/techDebate">
+                                    <img src={TheBTD} className="card-img-top" alt="" />
+                                    <h5 class="card-title">The Big Tech Debate</h5>
+                                    <div class="card-text lead">Coming Soon</div>
+                                </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
-                                <img src={FinalPitch} className="card-img-top" alt="" />
-                                <h5 class="card-title">The Final Pitch</h5>
-                                <div class="card-text lead">Coming Soon</div>
+                                <Linker className="hackathon-link" to="/finalPitch">
+                                    <img src={FinalPitch} className="card-img-top" alt="" />
+                                    <h5 class="card-title">The Final Pitch</h5>
+                                    <div class="card-text lead">Coming Soon</div>
+                                </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
-                                <img src={FoxHunt} className="card-img-top" alt="" />
-                                <h5 class="card-title">Fox Hunt</h5>
-                                <div class="card-text lead">Coming Soon</div>
+                                <Linker className="hackathon-link" to="/foxHunt">
+                                    <img src={FoxHunt} className="card-img-top" alt="" />
+                                    <h5 class="card-title">Fox Hunt</h5>
+                                    <div class="card-text lead">Coming Soon</div>
+                                </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
-                                <img src={IdeaPresentation} className="card-img-top" alt="" />
-                                <h5 class="card-title">Idea Presentation</h5>
-                                <div class="card-text lead">Coming Soon</div>
+                                <Linker className="hackathon-link" to="/ideaPres">
+                                    <img src={IdeaPresentation} className="card-img-top" alt="" />
+                                    <h5 class="card-title">Idea Presentation</h5>
+                                    <div class="card-text lead">Coming Soon</div>
+                                </Linker>
                             </div>
                         </div>
                     </div>
