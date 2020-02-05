@@ -26,16 +26,9 @@
 
 .hackathon-title {
     font-size: 3rem;
-    margin: 8%;
     font-weight: 500;
 }
-#hackArrow{
-    position: absolute;
-    margin-left: 80% !important;
-}
-#hackArrow :hover{
-    cursor: pointer;
-}
+
 .right-justify{
     text-align: right;
 }
@@ -95,16 +88,6 @@
     align-items: stretch;
     overflow: hidden;
 }
-/*.bottom-right{
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-}
-.bottom-left {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-}*/
 
 .guidelines {
     width: 40%;
@@ -155,6 +138,21 @@
     align-self: center;
 }
 
+.scroller-hackathon-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroller-hackathon-page:hover {
+    cursor: pointer;
+}
+
+.hacklist-wrapper {
+    margin: 5vh auto;
+}
+
 
 @media only screen and (max-width: 790px) {
 
@@ -200,7 +198,6 @@
     }
     .hackathon-title {
         font-size: 2rem;
-        margin: 10%;
         font-weight: 500;
     }
     .sastra-logo {
@@ -213,26 +210,13 @@
 .sastra-logo {
     width: 45%;
 }
-    #hackArrow{
-        position: relative;
-        margin-top: 5% !important;
-        margin-left:40% !important;
-        margin-bottom: 15% !important;
+
+@media only screen and (max-width:530px){
+
+    .hackathon-title {
+        font-size: 2rem;
+        font-weight: 500;
     }
-    @media only screen and (max-width:530px){
-        #hackArrow{
-           position: relative;
-            margin-top: 5% !important;
-            margin-left:33.5% !important;
-             margin-right: auto !important;
-            margin-bottom: 15% !important;
-        }
-
-        .hackathon-title {
-            font-size: 2rem;
-            margin: 10%;
-            font-weight: 500;
-        }
 
 
-    }
+}
