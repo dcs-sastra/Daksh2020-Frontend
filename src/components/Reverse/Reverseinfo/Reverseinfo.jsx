@@ -14,14 +14,14 @@ import UpperImage from "../../../assets/hackInfo/UpperImage.png";
 class Reverseinfo extends Component {
 
 	render() {
-		let title, description, poster, id;
+		let title, description, poster, id, link;
 		if (this.props.Reverse) {
 			for (let i = 0; i < this.props.Reverse.events.length; ++i) {
                 const revItem = this.props.Reverse.events[i];
                 
                 if (revItem.id == this.props.match.params.id)
                 {
-                    [title, description, poster, id] = [revItem.title, revItem.description, revItem.imageLink, revItem.id];
+                    [title, description, poster, id, link] = [revItem.title, revItem.description, revItem.imageLink, revItem.id, revItem.regLink];
                 }
 			}
 
@@ -49,7 +49,7 @@ class Reverseinfo extends Component {
 							</header>
 							<p className="hack-desc">{description}</p>
 
-							<button className="btn btn-red">Register</button>
+							<a target="_blank" href={link}><button className="btn btn-red">Register</button></a>
 
 						</div>
 						<div className="col-md-4 poster-wrapper">
