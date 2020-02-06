@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link as Pink } from "react-scroll";
 import { Link } from 'react-router-dom';
-import prize from '../../assets/prize.png'
+import FoxHuntImage from '../../assets/foxHunt.jpg'
 
 import Contact from "../../components/home/contact/Contact";
 
@@ -43,7 +43,7 @@ class FoxHunt extends Component {
 
                 <div class="">
                     <div class="hacktitle-wrapper">
-                        <img src={prize} alt="" />
+                        <img src={FoxHuntImage} alt="" width="600"/>
                         <div class="hacktitle-inner-wrapper">
                             <div class="hackathon-title">{this.props.foxHunt.title}</div>
 

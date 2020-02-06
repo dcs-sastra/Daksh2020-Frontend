@@ -13,6 +13,7 @@ class ComeSoon extends Component {
             e.preventDefault();
             console.log(this.state);
             this.props.subscribe(this.state.email);
+            this.setState({email:''})
          }
         // this.handleSubmit = (e) => async() => {
         //     e.preventDefault();
