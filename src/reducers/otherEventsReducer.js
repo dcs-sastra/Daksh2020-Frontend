@@ -97,7 +97,7 @@ const initState = {
 	},
 	ideaPres: {
 		title: "Idea Presentation",
-		description: "Our goal is to expose the student community to actual industry and societal problems and equip them to solve it using cutting edge technologies. We firmly believe this will smoothen their transition from academics to industry.",
+		description: "Here's a platform for any aspiring product developer to pitch and demonstrate a cool idea which they have thought of, and make sure it gets heard and spread to the right places.",
 	},
 	powerTalks: {
 		title: "Power Talks",

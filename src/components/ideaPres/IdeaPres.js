@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link as Pink } from "react-scroll";
 import { Link } from 'react-router-dom';
-import prize from '../../assets/prize.png'
 
 import Contact from "../../components/home/contact/Contact";
 
@@ -15,6 +14,8 @@ import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
 import sastra from '../../assets/SASTRA_LOGO.jpg'
+
+import IdeaPresentation from '../../assets/ideaPres.jpeg'
 
 import { connect } from 'react-redux';
 
@@ -43,7 +44,7 @@ class IdeaPres extends Component {
 
                 <div class="">
                     <div class="hacktitle-wrapper">
-                        <img src={prize} alt="" />
+                        <img src={IdeaPresentation} alt="" width="600"/>
                         <div class="hacktitle-inner-wrapper">
                             <div class="hackathon-title">{this.props.ideaPres.title}</div>
 
