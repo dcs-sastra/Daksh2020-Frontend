@@ -14,21 +14,20 @@ import UpperImage from "../../../assets/hackInfo/UpperImage.png";
 class Reverseinfo extends Component {
 
 	render() {
-		let title, description, poster, id, link;
+		let title, description, poster, id, link, descriptionLink;
 		if (this.props.Reverse) {
 			for (let i = 0; i < this.props.Reverse.events.length; ++i) {
-                const revItem = this.props.Reverse.events[i];
-                
-                if (revItem.id == this.props.match.params.id)
-                {
-                    [title, description, poster, id, link] = [revItem.title, revItem.description, revItem.imageLink, revItem.id, revItem.regLink];
-                }
+				const revItem = this.props.Reverse.events[i];
+
+				if (revItem.id == this.props.match.params.id) {
+					[title, description, poster, id, link, descriptionLink] = [revItem.title, revItem.description, revItem.imageLink, revItem.id, revItem.regLink, revItem.descriptionLink];
+				}
 			}
 
 		}
 
 		return (
-			<>
+			<div className="full-page">
 				<img src={UpperImage} id="upper-image" />
 				<img src={Ripple} id="ripple" />
 				<img src={Doodle} id="doodle" />
@@ -38,7 +37,7 @@ class Reverseinfo extends Component {
 					<div className="line" />
 				</div>
 				<div className="hackinfo-area">
-                    <center><h1 class="revinfo-title">{this.props.Reverse.title}</h1></center><br />
+					<center><h1 class="revinfo-title">{this.props.Reverse.title}</h1></center><br />
 					<div className="top-part row">
 						<div className="hack-text col-md-8">
 							<header className="my-header">
@@ -47,8 +46,8 @@ class Reverseinfo extends Component {
 								</div>
 
 							</header>
-							<p className="hack-desc">{description}</p>
-
+							<p className="font-weight-bold">{description}</p>
+							<a target="_blank" href={descriptionLink} className="btn btn-blue">Description</a>
 							<a target="_blank" href={link}><button className="btn btn-red">Register</button></a>
 
 						</div>
@@ -58,9 +57,10 @@ class Reverseinfo extends Component {
 					</div>
 					{/* <div className="bottom-part">
 						<img id="timeline" src={TimeLine} className="img-fluid" />
-					</div> */}<br />
+					</div> */}
+					<br />
 				</div>
-			</>
+			</div>
 		)
 	}
 }
@@ -68,7 +68,7 @@ class Reverseinfo extends Component {
 
 const mapStateToProps = state => {
 	return {
-        Reverse:state.otherEvents.reverse,
+		Reverse: state.otherEvents.reverse,
 		authState: state.user.authStatus
 	}
 }

@@ -1,5 +1,7 @@
 
-
+.hack-info-wrapper {
+	min-height: 65vh;
+}
 .hackinfo-area {
 	margin: 10vmax 10vmin 0px 10vmin;
 }
@@ -21,7 +23,7 @@
 
 .my-prize {
 	font-size: 1.2em;
-	font-weight: bold;	
+	font-weight: bold;
 	margin: 2%;
 }
 
@@ -37,11 +39,12 @@
 
 .poster {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-bottom: 1.3em;
+	width: 400px !important;
 }
 
 .poster-wrapper {
 	display: flex;
+	flex-flow: column;
 	min-height: 180px;
 	min-width: 300px;
     max-width: 350px !important;
@@ -49,10 +52,16 @@
 
 .btn-grp {
 	display: flex;
+	flex-flow: row;
 	align-items: center;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	margin-bottom: 5vh;
+}
+
+.note {
+	margin: 20px 0;
+	color: red;
+	font-size: 1.3rem;
+	font-weight: bolder;
+	width: 100%;
 }
 
 .btn-blue {
@@ -132,4 +141,16 @@
 .revinfo-title
 {
 	padding: 10px;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+@media (max-width: 545px) {
+	.poster {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		width: 250px !important;
+		margin-bottom: auto;
+	}
 }

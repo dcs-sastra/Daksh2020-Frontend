@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link as Pink } from "react-scroll";
 import { Link } from 'react-router-dom';
-import prize from '../../assets/prize.png'
+import prize from '../../assets/prize2.png'
 
 import Contact from "../../components/home/contact/Contact";
 
@@ -14,7 +14,6 @@ import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
-import sastra from '../../assets/SASTRA_LOGO.jpg'
 
 import { connect } from 'react-redux';
 
@@ -52,7 +51,7 @@ class Reverse extends Component {
                     </div>
 
                     <div className="sponsors-group-wrapper">
-                    <div class="row scroller" id = "hackArrow"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
+                        <div class="row scroller" id="hackArrow"><Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink></div>
                         <div className="sponsors-group">
                             <img src={TCS50} className="img-fluid sponsor" />
                             <img src={SC} className="img-fluid sponsor" />

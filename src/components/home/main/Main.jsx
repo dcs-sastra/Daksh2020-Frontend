@@ -19,6 +19,7 @@ import TheBTD from "../../../assets/events/thebtd.png";
 import FinalPitch from "../../../assets/events/finalPitch.png";
 import FoxHunt from "../../../assets/events/foxHunt.png";
 import IdeaPresentation from "../../../assets/events/ideaPresentation.png";
+import techno from '../../../assets/techno.png'
 
 import "./Main.css"
 
@@ -49,9 +50,10 @@ class Main extends Component {
                                 <h4>Build things that matter</h4>
                                 <p>That time of the year is back. It's time to tune your skills up! Let's change gears and suit up to build things that matter. Save the dates!</p>
                                 <div className="timings-block" >
-                                    <div>
+                                    <div className="social-logo">
                                         <a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} alt="" className="insta" /></a>
                                         <a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} alt="" className="insta" /></a>
+                                        <div className="line main-line" />
                                     </div>
                                     <div id="styleRow">
                                         <div id="box1">
@@ -125,45 +127,56 @@ class Main extends Component {
                         <div className="row text-center">
                             <div className="col-md-4 col-sm-6 all-events">
                                 <Linker className="hackathon-link" to="/hackathon">
-                                    <img src={Hackathons} className="card-img-top" alt="" />
+                                    <img src={Hackathons} className="card-img-top" alt="" /><br /><br />
                                     <h5 class="card-title">Hackathons</h5>
-                                    <div class="card-text lead">A series of mind boggling competitions involving creative and scientific thinking fusion to produce disruptive  innovative results</div>
+                                    {/* <div class="card-text lead">A series of mind boggling competitions involving creative and scientific thinking fusion to produce disruptive  innovative results</div> */}
                                 </Linker>
                             </div>
 
                             <div className="col-md-4 col-sm-6 all-events">
                                 <Linker className="hackathon-link" to="/reverse">
                                     <img src={RevEngg} className="card-img-top" alt="" />
+                                    <br /><br />
                                     <h5 class="card-title">Reverse Engineering</h5>
-                                    <div class="card-text lead">Coming Soon</div>
+                                    {/* <div class="card-text lead">Coming Soon</div> */}
                                 </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
                                 <Linker className="hackathon-link" to="/techDebate">
-                                    <img src={TheBTD} className="card-img-top" alt="" />
+                                    <img src={TheBTD} className="card-img-top" alt="" /><br /><br />
                                     <h5 class="card-title">The Big Tech Debate</h5>
-                                    <div class="card-text lead">Coming Soon</div>
+                                    {/* <div class="card-text lead">Coming Soon</div> */}
                                 </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
                                 <Linker className="hackathon-link" to="/finalPitch">
-                                    <img src={FinalPitch} className="card-img-top" alt="" />
+                                    <img src={FinalPitch} className="card-img-top" alt="" /><br /><br />
                                     <h5 class="card-title">The Final Pitch</h5>
-                                    <div class="card-text lead">Coming Soon</div>
+                                    {/* <div class="card-text lead">Coming Soon</div> */}
                                 </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
                                 <Linker className="hackathon-link" to="/foxHunt">
-                                    <img src={FoxHunt} className="card-img-top" alt="" />
+                                    <img src={FoxHunt} className="card-img-top" alt="" /><br /><br />
                                     <h5 class="card-title">Fox Hunt</h5>
-                                    <div class="card-text lead">Coming Soon</div>
+                                    {/* <div class="card-text lead">Coming Soon</div> */}
                                 </Linker>
                             </div>
                             <div className="col-md-4 col-sm-6 all-events">
                                 <Linker className="hackathon-link" to="/ideaPres">
-                                    <img src={IdeaPresentation} className="card-img-top" alt="" />
+                                    <img src={IdeaPresentation} className="card-img-top" alt="" /><br /><br />
                                     <h5 class="card-title">Idea Presentation</h5>
-                                    <div class="card-text lead">Coming Soon</div>
+                                    {/* <div class="card-text lead">Coming Soon</div> */}
+                                </Linker>
+                            </div>
+                            <div className="col-md-4 col-sm-6">
+
+                            </div>
+                            <div className="col-md-4 col-sm-6 all-events">
+                                <Linker className="hackathon-link" to="/techno">
+                                    <img src={techno} className="card-img-top" alt="" /><br /><br />
+                                    <h5 class="card-title">Technotainment</h5>
+                                    {/* <div class="card-text lead">A series of mind boggling competitions involving creative and scientific thinking fusion to produce disruptive  innovative results</div> */}
                                 </Linker>
                             </div>
                         </div>

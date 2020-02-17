@@ -22,12 +22,28 @@ class WorkInfo extends Component {
   render() {
 
     let title, description, poster, id, ps, prize, regLink;
+    let otherData, contact, dates;
     if (this.props.workshops) {
       for (let i = 0; i < this.props.workshops.events.length; ++i) {
         const workItem = this.props.workshops.events[i];
         console.log(workItem);
         if (workItem.id == this.props.match.params.id) {
-          [title, description, poster, id, regLink] = [workItem.title, workItem.description, workItem.imageLink, workItem._id, workItem.regLink];
+          if (workItem.topics) {
+            otherData = workItem.topics.map((d, i) => {
+              if (d === "AR" || d === "VR") {
+                return (
+                  <div>
+                    <br />
+                    <h6 className="font-weight-bold text-underline"><u>{d}</u></h6>
+                    <br />
+                  </div>
+                )
+              }
+              return (<li key={i}>{d}</li>)
+            });
+          }
+          contact = workItem.contact.map((d, i) => (<li key={i}>{d}</li>));
+          [title, description, poster, id, regLink, dates] = [workItem.title, workItem.description, workItem.imageLink, workItem._id, workItem.regLink, workItem.dates];
           console.log("title is" + title)
         }
       }
@@ -35,7 +51,7 @@ class WorkInfo extends Component {
     }
 
     return (
-      <>
+      <div className="full-page">
         <img src={UpperImage} id="upper-image" />
         <img src={Ripple} id="ripple" />
         <img src={Doodle} id="doodle" />
@@ -56,11 +72,25 @@ class WorkInfo extends Component {
 								</div> */}
               </header>
               <p className="hack-desc">{description}</p>
+              <br />
+              <p>
+                <h6 className="font-weight-bold">Topics Covered</h6>
+                <ul>
+                  {otherData}
+                </ul>
+                <h6 className="font-weight-bold">Dates : {dates} 2020 </h6>
+              </p>
+              <p>
+                <h6 className="font-weight-bold">Contact: </h6>
+                <ul>
+                  {contact}
+                </ul>
+              </p>
               <div className="btn-grp">
                 {/* <a className="btn btn-blue" target="_blank" href={ps}>Problem Description</a> */}
                 {
                   // this.props.authState
-                  <a href={regLink}> <button className="btn btn-red" data-toggle="modal" data-target="#hackregister"> Register</button></a>
+                  <a target="_blank" href={regLink}> <button className="btn btn-red" data-toggle="modal" data-target="#hackregister"> Register</button></a>
                   // : <button className="btn btn-red" onClick={() => { toast.error("Please login to register for hackathons") }}>Register</button>
                 }
               </div>
@@ -73,7 +103,7 @@ class WorkInfo extends Component {
             <img id="timeline" src={TimeLine} className="img-fluid" />
           </div> */}
         </div>
-      </>
+      </div>
     )
   }
 }

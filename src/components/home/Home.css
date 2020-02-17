@@ -5,3 +5,16 @@ html{
 .contain {
 	position: relative;
 }
+
+.workshop-img {
+    border-radius: 10px;
+    height: 150px;
+}
+
+.workshops-event img {
+    transition: all 0.5s;
+}
+.workshops-event img:hover {
+    box-shadow: 1px 1px 30px black;
+    transform: scale(1.01);
+}

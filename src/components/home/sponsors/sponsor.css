@@ -1,0 +1,24 @@
+.sponsor-tag {
+  margin-top:  30px;
+}
+
+
+.sponsor-div{
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  height: 270px;
+  justify-content: center;
+}
+
+
+.sponsor-div img {
+  margin: auto auto;
+}
+
+
+/* .sponsor-div {
+  display: flex;
+  flex-direction: column;
+  height: 1
+} */

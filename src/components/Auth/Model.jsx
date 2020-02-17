@@ -99,7 +99,7 @@ class MyModel extends React.Component {
       return (
         <div>
           <Modal isOpen={isOpen} toggle={toggle} >
-            <ModalHeader toggle={toggle}>Signup</ModalHeader>
+            <ModalHeader toggle={toggle}>Register</ModalHeader>
             <ModalBody className="text-center">
               <img src={dakshLogo} alt=".." />
               <div className="container mt-4 text-left">
@@ -138,7 +138,7 @@ class MyModel extends React.Component {
                   </label>
                   <Input type="number" name="phone" value={phone} onChange={this.handleChange} required />
                   <br />
-                  <Button size="lg" block type="submit" className="login-btn">Dive in   <i className="fas fa-door-open"></i></Button>
+                  <Button size="lg" block type="submit" className="login-btn">Register!<i className="fas fa-door-open"></i></Button>
                   <div className="redirect" onClick={() => { this.setMode("login"); this.clear() }}>Already have an Account?</div>
                 </form>
                 <br /><br />

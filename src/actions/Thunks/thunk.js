@@ -111,16 +111,19 @@ export const registerHack = (data) => async dispatch => {
     })
   } catch (err) {
     console.log(err.response)
-    // toast.error(err.response.data.message);
+    let message;
+    if (err.response.data) {
+      message = err.response.data.message
+    }
     toast.update(toastId, {
-      type: toast.TYPE.ERROR, autoClose: 5000, className: "rotateY animated", render: err.response.message || "Couldn't connect, Please try again"
+      type: toast.TYPE.ERROR, autoClose: 5000, className: "rotateY animated", render: message || "Team Mate email not found!"
     })
   }
 }
 
 export const subscribe = (email) => async (dispatch) => {
   try {
-    const data = await axios.post(BACKEND_URL+"/subscribeEmail", { email });
+    const data = await axios.post(BACKEND_URL + "/subscribeEmail", { email });
     toast.success("Subscribe Success!")
     dispatch({
       type: SUBSCRIBE,

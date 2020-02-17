@@ -1,86 +1,57 @@
-import React, { Component } from 'react';
-import { Link as Pink } from "react-scroll";
-import { Link } from 'react-router-dom';
-import prize from '../../assets/prize.png'
+import React, { Component } from "react";
 
-import Contact from "../../components/home/contact/Contact";
+import { toast } from 'react-toastify';
 
-import Circles from "../../assets/hackathon/circles.png"
-import Arrow from "../../assets/arrow.svg";
 
-import TCS50 from "../../assets/hackathon/tcs50.png";
-import SC from "../../assets/hackathon/sc.png";
-import Genesys from "../../assets/hackathon/genesys.png";
-import TVS from "../../assets/hackathon/tvs.png";
-import PayPal from "../../assets/hackathon/paypal.png";
-import TBI from "../../assets/hackathon/tbi.png";
-import sastra from '../../assets/SASTRA_LOGO.jpg'
-
-import { connect } from 'react-redux';
+import Fb from "../../assets/fb.svg";
+import Insta from "../../assets/insta.svg";
+import Doodle from "../../assets/hackInfo/Doodle.png";
+import Ripple from "../../assets/hackInfo/Ripple.png";
+import UpperImage from "../../assets/hackInfo/UpperImage.png";
+import poster from '../../assets/shows/idp.jpeg'
 
 class IdeaPres extends Component {
 
     render() {
-        // const match = this.props.match;
-        // let hackthonElements = [];
-        // if (this.props.hackathons) {
-        //     for (let i = 0; i < this.props.hackathons.length; ++i) {
-        //         let setBg = {
-        //             backgroundImage: `url(${this.props.hackathons[i].poster})`
-        //         };
-        //         hackthonElements.push(
-        //             <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
-        //                 <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
-        //             </Link>
-        //         );
-        //     }
-        // }
-
         return (
-            <div className="hacklist-page">
+            <div className="hack-info-wrapper">
+                <img src={UpperImage} id="upper-image" />
+                <img src={Ripple} id="ripple" />
+                <img src={Doodle} id="doodle" />
+                <div className="my-social">
+                    <a target="_blank" href="https://www.facebook.com/daksh.sastra/"><img src={Fb} className="social-icon" /></a>
+                    <a target="_blank" href="https://www.instagram.com/daksh2k20/"><img src={Insta} className="social-icon" /></a>
+                    <div className="line" />
+                </div>
+                <div className="hackinfo-area">
+                    <div className="top-part row">
+                        <div className="hack-text col-md-8">
+                            <header className="my-header">
+                                <div className="my-title">
+                                    Idea Presentation
+								</div>
 
-                <div class="circles"><img src={Circles} alt="" id="circle-img" /></div>
-
-                <div class="">
-                    <div class="hacktitle-wrapper">
-                        <img src={prize} alt="" />
-                        <div class="hacktitle-inner-wrapper">
-                            <div class="hackathon-title">{this.props.ideaPres.title}</div>
-
-                            <div class="subheading">{this.props.ideaPres.description}</div>
-                            <br />
-                            <a className="btn btn-danger guidelines" type="submit" href="https://drive.google.com/uc?id=1N19iRxu8UQP9zhJBFZbMv_CBRnNu_FUk" target="_blank">Guidelines</a>
+                            </header>
+                            <p className="hack-desc">If your mind is an oasis of ideas, welcome home.
+Mould the chaos in your mind to conceptual perfection. Let your ideas take the stage.
+Demontrate them in the presence of an eminent panel. Walk in with ideas, walk out with glory.
+</p>
+                            <p></p>
+                            <div className="btn-grp">
+                                <a href="https://drive.google.com/a/sastra.ac.in/file/d/1QoKpgn420rbrVOXqJW3AcJ5ySSpfnlna/view?usp=drivesdk" target="_blank" className="btn btn-red">Instructions</a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="sponsors-group-wrapper">
-                    <div class="scroller-hackathon-page">
-                        <Pink activeClass="active" to="hacklist" spy={true} smooth={true} duration={800} offset={-30}><img src={Arrow} alt="" /></Pink>
-                    </div>
-                        <div className="sponsors-group">
-                            <img src={TCS50} className="img-fluid sponsor" />
-                            <img src={SC} className="img-fluid sponsor" />
-                            <img src={Genesys} className="img-fluid sponsor" />
-                            <img src={TVS} className="img-fluid sponsor" />
-                            <img src={PayPal} className="img-fluid sponsor" />
-                            <img src={TBI} className="img-fluid sponsor" />
+                        <div className="col-md-4 poster-wrapper">
+                            <img src={poster} className="img-fluid poster rounded" />
                         </div>
                     </div>
                 </div>
-                {/*<div class="container hacklist-wrapper">
-                    <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Hackathons</h1></div>
-                    <div class="row align-items-center justify-content-center">{hackthonElements}</div>
-                </div>*/}
-                <Contact></Contact>
             </div>
         )
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        ideaPres: state.otherEvents.ideaPres
-    }
-}
 
-export default connect(mapStateToProps)(IdeaPres);
+
+
+export default IdeaPres;

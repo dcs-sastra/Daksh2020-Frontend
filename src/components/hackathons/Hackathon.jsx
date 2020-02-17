@@ -14,8 +14,7 @@ import Genesys from "../../assets/hackathon/genesys.png";
 import TVS from "../../assets/hackathon/tvs.png";
 import PayPal from "../../assets/hackathon/paypal.png";
 import TBI from "../../assets/hackathon/tbi.png";
-import sastra from '../../assets/SASTRA_LOGO.jpg'
-
+import sorry from '../../assets/sorry.svg';
 import "./Hackathon.css"
 
 import { connect } from 'react-redux';
@@ -30,22 +29,53 @@ class Hackathon extends Component {
     render() {
         const match = this.props.match;
         let hackthonElements = [];
+        let otherHacks = [];
         if (this.props.hackathons) {
             for (let i = 0; i < this.props.hackathons.length; ++i) {
                 let setBg = {
                     backgroundImage: `url(${this.props.hackathons[i].poster})`
                 };
-                hackthonElements.push(
-                    <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="my-card-link col-md-3 inlay" style={setBg}>
-                        <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
-                    </Link>
-                );
+                if (this.props.hackathons[i].title === "Genesys Daksh Hackathon") {
+                    hackthonElements.unshift(
+                        <Link to={`/hackathon/${this.props.hackathons[i]._id}`} className="genesys my-card-link col-md-3 inlay" style={setBg}>
+                            <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
+                        </Link>
+                    )
+                } else {
+                    hackthonElements.push(
+                        <button data-toggle="modal" data-target="#exampleModal" className="my-card-link col-md-3 inlay" style={setBg}>
+                            <div class="name"><h4>{this.props.hackathons[i].title}</h4></div>
+                        </button>
+                    );
+
+                }
             }
         }
-
+        otherHacks = hackthonElements.slice();
+        otherHacks.shift()
         return (
             <div className="hacklist-page">
 
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Hackathon Registration</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div className="container">
+                                    <h4 className="text-center text-danger">Oops! You missed the deadline!</h4>
+                                    <br /><br />
+                                    <img src={sorry} alt="..." />
+                                    <br /> <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="circles"><img src={Circles} alt="" id="circle-img" /></div>
 
                 <div class="">
@@ -74,7 +104,8 @@ class Hackathon extends Component {
                 </div>
                 <div class="container hacklist-wrapper">
                     <div class="row justify-content-center" id="hacklist"><h1 class="hackathon-title">Hackathons</h1></div>
-                    <div class="row align-items-center justify-content-center">{hackthonElements}</div>
+                    <div class="row align-items-center justify-content-center">{hackthonElements[0]}</div>
+                    <div class="row align-items-center justify-content-center">{otherHacks}</div>
                 </div>
                 <Contact></Contact>
             </div>
@@ -84,7 +115,7 @@ class Hackathon extends Component {
 
 const mapStateToProps = state => {
     return {
-        hackathons: state.otherEvents.workshops
+        hackathons: state.hackathon.hackathons
     }
 }
 
