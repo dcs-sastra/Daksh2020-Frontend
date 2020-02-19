@@ -10,15 +10,23 @@ import Navbar from './components/navbar/Navbar';
 import Contact from './components/home/contact/Contact';
 
 class App extends React.Component {
+  state = {
+    navState: true
+  }
   componentDidMount() {
     this.props.authStateRefresh();
+    if (window.location.pathname === "/random-hack") {
+      this.setState({
+        navState: false
+      })
+    }
   }
   render() {
     return (
       <BrowserRouter>
         <div class="contain">
           <ToastContainer toastClassName="large-toast" />
-          <Navbar />
+          {this.state.navState && <Navbar />}
           <Routes />
         </div>
       </BrowserRouter>

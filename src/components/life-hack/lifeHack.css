@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,900&display=swap');
+.wrapper {
+  background-image: url("../../assets/LIFE_HACK.jpg");
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+.wrapper {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.footer-tag {
+  font-size: 30px;
+  font-weight: 900;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #42a6b2;
+}
+
+
+.hack-quote {
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+.hack-info {
+  margin: 100px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-tag {
+    font-size: 18px;
+  }
+}

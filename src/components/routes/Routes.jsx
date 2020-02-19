@@ -14,6 +14,7 @@ import Reverseinfo from '../Reverse/Reverseinfo/Reverseinfo';
 
 import Workshop from '../workshops/Workshop';
 import WorkInfo from '../workshops/workInfo/WorkInfo';
+import LifeHack from '../life-hack/lifeHack';
 
 export default function Routes() {
     return (
@@ -30,6 +31,7 @@ export default function Routes() {
             <Route exact path='/reverse' component={Reverse} />
             <Route path='/reverse/:id' component={Reverseinfo} />
             <Route exact path='/techno' component={Techno} />
+            <Route exact path="/random-hack" component={LifeHack} />
         </Switch>
     )
 }
